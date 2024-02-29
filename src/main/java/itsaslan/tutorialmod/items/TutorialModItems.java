@@ -1,11 +1,15 @@
 package itsaslan.tutorialmod.items;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import itsaslan.tutorialmod.blocks.TutorialCrop;
+import itsaslan.tutorialmod.blocks.TutorialModBlocks;
 import itsaslan.tutorialmod.enums.ArmorMaterials;
 import itsaslan.tutorialmod.enums.ToolMaterials;
 import itsaslan.tutorialmod.items.base.*;
 import itsaslan.tutorialmod.lib.ModVars;
+import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.*;
 
 public class TutorialModItems {
@@ -23,6 +27,11 @@ public class TutorialModItems {
     public static ItemArmor stellarChestplate;
     public static ItemArmor stellarLeggings;
     public static ItemArmor stellarBoots;
+
+    public static Item waxSeed;
+    public static Item wax;
+
+    public static Item sandPaper;
 
     public static void init()
     {
@@ -55,6 +64,10 @@ public class TutorialModItems {
         stellarGem.setTextureName((ModVars.MOD_ID + ":" + stellarGem.getUnlocalizedName()));
         GameRegistry.registerItem(stellarGem, stellarGem.getUnlocalizedName());
 
+        sandPaper = new Item().setUnlocalizedName("sandpaper").setCreativeTab(CreativeTabs.tabMisc);
+        sandPaper.setTextureName(ModVars.MOD_ID + ":" + sandPaper.getUnlocalizedName());
+        GameRegistry.registerItem(sandPaper, sandPaper.getUnlocalizedName());
+
         // Tools
 
         stellarSword = (ItemSword) new ItemSword(ToolMaterials.FUNNYMAT).setUnlocalizedName("stellarSword").setCreativeTab(CreativeTabs.tabCombat);
@@ -77,7 +90,15 @@ public class TutorialModItems {
         stellarShovel.setTextureName(ModVars.MOD_ID + ":" + stellarShovel.getUnlocalizedName());
         GameRegistry.registerItem(stellarShovel, "stellarShovel");
 
+        // Crops
 
+        waxSeed = new ItemSeeds(TutorialModBlocks.waxCrop, Blocks.farmland).setCreativeTab(CreativeTabs.tabMisc).setUnlocalizedName("waxSeed");
+        waxSeed.setTextureName(ModVars.MOD_ID + ":" + waxSeed.getUnlocalizedName());
+        GameRegistry.registerItem(waxSeed, "waxSeed");
+
+        wax = new Item().setCreativeTab(CreativeTabs.tabMisc).setUnlocalizedName("wax");
+        wax.setTextureName(ModVars.MOD_ID + ":" + wax.getUnlocalizedName());
+        GameRegistry.registerItem(wax, "wax");
 
     }
 

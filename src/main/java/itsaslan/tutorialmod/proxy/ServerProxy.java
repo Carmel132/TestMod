@@ -5,7 +5,6 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import itsaslan.tutorialmod.Main;
-import itsaslan.tutorialmod.handlers.GUIHandler;
 
 public class ServerProxy extends CommonProxy{
 

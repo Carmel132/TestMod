@@ -1,13 +1,16 @@
 package itsaslan.tutorialmod.blocks;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import itsaslan.tutorialmod.lib.ModVars;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
 
 public class TutorialModBlocks {
 
     public static InteractableBlocks blockOfStellarOre;
     public static TutorialBlock stellarOre;
+    public static Block waxCrop;
 
     public static void init()
     {
@@ -16,6 +19,9 @@ public class TutorialModBlocks {
 
         stellarOre = new TutorialBlock(Material.rock, "stellarOre", 3.0f, 0.5f, 2, 500.0f, Block.soundTypeStone);
         GameRegistry.registerBlock(stellarOre, stellarOre.getUnlocalizedName());
+
+        waxCrop = new TutorialCrop().setBlockName("waxCrop").setBlockTextureName(ModVars.MOD_ID + ":waxCrop");
+        GameRegistry.registerBlock(waxCrop, waxCrop.getUnlocalizedName());
     }
 
 }

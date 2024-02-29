@@ -14,3 +14,9 @@ item.stellarBoots.name=Stellar Boots
 item.stellarLeggings.name=Stellar Leggings
 
 item.stellarGem.name=Stellar Gem
+
+item.wax.name=Wax
+item.waxSeed.name=Wax Seed
+tile.waxCrop.name=Wax Crop
+
+item.sandpaper.name=Sandpaper
