@@ -1,0 +1,16 @@
+[
+{
+  "modid": "tutorialmod",
+  "name": "Tutorial Mod",
+  "description": "Chat we win these",
+  "version": "0.0.1",
+  "mcversion": "1.7.10",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["ItsAslan"],
+  "credits": "Hehehaw",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
