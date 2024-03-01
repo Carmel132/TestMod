@@ -18,7 +18,7 @@ public class ArmorBase extends ItemArmor
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
     {
-        return this.armorType == 0 || this.armorType == 1 ? ModVars.MOD_ID + ":models/armor/" + rootName + "_layer_1.png" : ModVars.MOD_ID + ":models/armor/" + rootName + "_layer_2.png";
+        return this.armorType == 2 ? ModVars.MOD_ID + ":models/armor/" + rootName + "_layer_2.png" : ModVars.MOD_ID + ":models/armor/" + rootName + "_layer_1.png";
     }
 
 }
