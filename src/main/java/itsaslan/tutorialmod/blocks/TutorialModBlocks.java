@@ -11,6 +11,7 @@ public class TutorialModBlocks {
     public static InteractableBlocks blockOfStellarOre;
     public static TutorialBlock stellarOre;
     public static Block waxCrop;
+    public static Block interactableTest;
 
     public static Block waxChest;
 
@@ -24,6 +25,10 @@ public class TutorialModBlocks {
 
         waxCrop = new TutorialCrop().setBlockName("waxCrop").setBlockTextureName(ModVars.MOD_ID + ":waxCrop");
         GameRegistry.registerBlock(waxCrop, waxCrop.getUnlocalizedName());
+
+        interactableTest = new InteractableBlocks(Material.rock, "interactableTest", 3.0f, 1.0f, 2, 500.0f, Block.soundTypeAnvil).setBlockName("interactableTest");
+        GameRegistry.registerBlock(interactableTest, interactableTest.getUnlocalizedName());
+
     }
 
 }

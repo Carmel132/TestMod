@@ -37,22 +37,22 @@ public class stellarGeneration implements IWorldGenerator {
 
     private void genNether(World world, Random random, int x, int z)
     {
-        addOreSpawn(TutorialModBlocks.stellarOre, world, random, x, z, 16, 16, 6, 2, 12, 12, 60);
+        addOreSpawn(TutorialModBlocks.stellarOre, world, random, x, z, 16, 16, 6, 2, 3, 12, 30);
     }
 
     private void genOverworld(World world, Random random, int x, int z)
     {
-        addOreSpawn(TutorialModBlocks.stellarOre, world, random, x, z, 16, 16, 6, 2, 12, 12, 60);
+        addOreSpawn(TutorialModBlocks.stellarOre, world, random, x, z, 16, 16, 6, 2, 3, 12, 30);
     }
 
     private void genEnd(World world, Random random, int x, int z)
     {
-        addOreSpawn(TutorialModBlocks.stellarOre, world, random, x, z, 16, 16, 6, 2, 12, 12, 60);
+        addOreSpawn(TutorialModBlocks.stellarOre, world, random, x, z, 16, 16, 6, 2, 3, 12, 30);
     }
 
     private void genAll(World world, Random random, int x, int z)
     {
-        addOreSpawn(TutorialModBlocks.stellarOre, world, random, x, z, 16, 16, 6, 2, 12, 12, 60);
+        addOreSpawn(TutorialModBlocks.stellarOre, world, random, x, z, 16, 16, 6, 2, 3, 12, 30);
     }
 
     public void addOreSpawn(Block block, World world, Random random, int blockX, int blockZ, int maxX, int maxZ, int maxVienSize, int minVienSize, int chanceToSpawn, int minY, int maxY)

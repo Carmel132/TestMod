@@ -34,6 +34,9 @@ public class TutorialCrafting {
         GameRegistry.addShapelessRecipe(new ItemStack(TutorialModItems.sandPaper, 16), new Object[]{Blocks.sand, Blocks.sand, Items.paper});
         GameRegistry.addShapelessRecipe(new ItemStack(TutorialModItems.waxSeed, 4), new Object[]{Items.sugar, Items.coal, Items.paper});
 
+        GameRegistry.addRecipe(new ItemStack(TutorialModItems.stellarIngot), new Object[]{"III", "III", "III", 'I', TutorialModItems.stellarNugget});
+        GameRegistry.addShapelessRecipe(new ItemStack(TutorialModItems.stellarNugget, 9), new Object[]{TutorialModItems.stellarIngot});
+
     }
 
 }

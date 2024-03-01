@@ -1,5 +1,6 @@
 package itsaslan.tutorialmod.items;
 
+import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import itsaslan.tutorialmod.blocks.TutorialCrop;
 import itsaslan.tutorialmod.blocks.TutorialModBlocks;
@@ -11,11 +12,14 @@ import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.*;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
 
 public class TutorialModItems {
 
     public static Item stellarIngot;
     public static Item stellarGem;
+    public static Item stellarNugget;
 
     public static ItemSword stellarSword;
     public static ItemPickaxe stellarPickaxe;
@@ -67,6 +71,10 @@ public class TutorialModItems {
         sandPaper = new Item().setUnlocalizedName("sandpaper").setCreativeTab(CreativeTabs.tabMisc);
         sandPaper.setTextureName(ModVars.MOD_ID + ":" + sandPaper.getUnlocalizedName());
         GameRegistry.registerItem(sandPaper, sandPaper.getUnlocalizedName());
+
+        stellarNugget = new Item().setUnlocalizedName("stellarNugget").setCreativeTab(CreativeTabs.tabMaterials);
+        stellarNugget.setTextureName(ModVars.MOD_ID + ":" + stellarNugget.getUnlocalizedName());
+        GameRegistry.registerItem(stellarNugget, stellarNugget.getUnlocalizedName());
 
         // Tools
 
