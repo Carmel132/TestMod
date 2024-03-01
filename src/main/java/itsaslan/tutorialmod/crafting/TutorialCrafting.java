@@ -5,6 +5,7 @@ import itsaslan.tutorialmod.blocks.TutorialModBlocks;
 import itsaslan.tutorialmod.items.TutorialModItems;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 public class TutorialCrafting {
@@ -31,6 +32,7 @@ public class TutorialCrafting {
         GameRegistry.addRecipe(new ItemStack(TutorialModItems.stellarHoe), new Object[]{"II", " K", " K", 'I', TutorialModItems.stellarIngot, 'K', Items.stick});
 
         GameRegistry.addShapelessRecipe(new ItemStack(TutorialModItems.sandPaper, 16), new Object[]{Blocks.sand, Blocks.sand, Items.paper});
+        GameRegistry.addShapelessRecipe(new ItemStack(TutorialModItems.waxSeed, 4), new Object[]{Items.sugar, Items.coal, Items.paper});
 
     }
 

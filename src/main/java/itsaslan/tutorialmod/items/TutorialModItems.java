@@ -96,7 +96,7 @@ public class TutorialModItems {
         waxSeed.setTextureName(ModVars.MOD_ID + ":" + waxSeed.getUnlocalizedName());
         GameRegistry.registerItem(waxSeed, "waxSeed");
 
-        wax = new Item().setCreativeTab(CreativeTabs.tabMisc).setUnlocalizedName("wax");
+        wax = new ItemFood(6, 0.5f, false).setCreativeTab(CreativeTabs.tabMisc).setUnlocalizedName("wax");
         wax.setTextureName(ModVars.MOD_ID + ":" + wax.getUnlocalizedName());
         GameRegistry.registerItem(wax, "wax");
 

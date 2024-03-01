@@ -12,6 +12,8 @@ public class TutorialModBlocks {
     public static TutorialBlock stellarOre;
     public static Block waxCrop;
 
+    public static Block waxChest;
+
     public static void init()
     {
         blockOfStellarOre = new InteractableBlocks(Material.rock, "blockOfStellarOre", 3.0f, 1.0f, 2, 500.0f, Block.soundTypeAnvil);
