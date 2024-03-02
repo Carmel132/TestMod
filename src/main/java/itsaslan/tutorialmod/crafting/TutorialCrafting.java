@@ -37,6 +37,8 @@ public class TutorialCrafting {
         GameRegistry.addRecipe(new ItemStack(TutorialModItems.stellarIngot), new Object[]{"III", "III", "III", 'I', TutorialModItems.stellarNugget});
         GameRegistry.addShapelessRecipe(new ItemStack(TutorialModItems.stellarNugget, 9), new Object[]{TutorialModItems.stellarIngot});
 
+        GameRegistry.addRecipe(new ItemStack(TutorialModBlocks.waxChest), new Object[]{"IKI", "I I", "III", 'I', TutorialModItems.wax, 'K', Blocks.glass_pane});
+
     }
 
 }
