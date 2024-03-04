@@ -8,6 +8,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import itsaslan.tutorialmod.generation.stellarGeneration;
+import itsaslan.tutorialmod.handlers.GuiHandler;
 import itsaslan.tutorialmod.lib.ModVars;
 import itsaslan.tutorialmod.proxy.CommonProxy;
 import itsaslan.tutorialmod.proxy.ServerProxy;
@@ -32,6 +33,7 @@ public class Main {
     public void init(FMLInitializationEvent $e)
     {
         proxy.init($e);
+        NetworkRegistry.INSTANCE.registerGuiHandler(Main.instance, new GuiHandler());
     }
 
     @Mod.EventHandler

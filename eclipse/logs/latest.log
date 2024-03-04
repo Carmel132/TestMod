@@ -1,203 +1,99 @@
-[15:07:57] [main/INFO]: Setting user: Player616
-[15:07:59] [Client thread/INFO]: LWJGL Version: 2.9.1
-[15:08:11] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Tutorial Mod
-[15:08:12] [Sound Library Loader/INFO]: Sound engine started
-[15:08:12] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
-[15:08:13] [Client thread/INFO]: Created: 16x16 textures/items-atlas
-[15:08:13] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Tutorial Mod
-[15:08:13] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[15:08:13] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[15:08:14] [Sound Library Loader/INFO]: Sound engine started
-[15:08:19] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:music.menu
-[15:08:24] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:gui.button.press
-[15:08:26] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[15:08:26] [Server thread/INFO]: Generating keypair
-[15:08:27] [Server thread/INFO]: Preparing start region for level 0
-[15:08:28] [Server thread/INFO]: Changing view distance to 12, from 10
-[15:08:28] [Server thread/INFO]: Player616[local:E:e3f4beb6] logged in with entity id 325 at (-784.2252692046188, 81.0, 419.097552492982)
-[15:08:28] [Server thread/INFO]: Player616 joined the game
-[15:08:29] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:29] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:29] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:29] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:30] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:30] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:30] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:30] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:30] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:30] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:30] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:30] [Server thread/INFO]: Saving and pausing game...
-[15:08:30] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[15:08:31] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[15:08:31] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[15:08:32] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:32] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:32] [Server thread/INFO]: Player616 has just earned the achievement [Taking Inventory]
-[15:08:32] [Client thread/INFO]: [CHAT] Player616 has just earned the achievement [Taking Inventory]
-[15:08:32] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:32] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:32] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:33] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:33] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:33] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:33] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:33] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:34] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:34] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:34] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:34] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:34] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:34] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:35] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:35] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:35] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:35] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:35] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:35] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:35] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.grass
-[15:08:36] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:36] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:36] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.grass
-[15:08:36] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:dig.stone
-[15:08:36] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:36] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:36] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:36] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:36] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:dig.stone
-[15:08:36] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:37] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:37] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:37] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:37] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:dig.stone
-[15:08:37] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:37] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:37] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:37] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.grass
-[15:08:37] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:38] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:dig.stone
-[15:08:38] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:38] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:38] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:38] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.grass
-[15:08:38] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:38] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:38] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:random.chestopen
-[15:08:38] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:random.chestopen
-[15:08:38] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:39] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:39] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:39] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:39] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:39] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:39] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:random.chestclosed
-[15:08:39] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:random.chestclosed
-[15:08:39] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:39] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:39] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:40] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:40] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:40] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:40] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:40] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:40] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:40] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:41] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:41] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:41] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:41] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:41] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:41] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:42] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:42] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:42] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:music.game.creative
-[15:08:42] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:42] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:random.chestopen
-[15:08:42] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:random.chestopen
-[15:08:42] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:42] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:42] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:42] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:42] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:43] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:43] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:43] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:43] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:43] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:43] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:43] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:44] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:44] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:44] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:44] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:44] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:44] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:random.chestclosed
-[15:08:44] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:random.chestclosed
-[15:08:44] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.grass
-[15:08:44] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:44] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:45] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:dig.stone
-[15:08:45] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:45] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:45] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:dig.stone
-[15:08:45] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:45] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:45] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:45] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:45] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:46] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:46] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.grass
-[15:08:46] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:46] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:46] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:46] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:46] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:46] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:47] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.grass
-[15:08:47] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:47] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:47] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.grass
-[15:08:47] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:47] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:47] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:47] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:47] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.grass
-[15:08:48] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:48] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:48] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:48] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:48] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:48] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:48] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:48] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:49] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:49] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:49] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:49] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.grass
-[15:08:49] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:49] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:49] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:49] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.grass
-[15:08:49] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:49] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.grass
-[15:08:50] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:50] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:50] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:50] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:50] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:50] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:50] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:50] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:ambient.weather.rain
-[15:08:50] [Server thread/INFO]: Saving and pausing game...
-[15:08:50] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[15:08:51] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[15:08:51] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[15:08:51] [Client thread/INFO]: Stopping!
-[15:08:51] [Server thread/INFO]: Stopping server
-[15:08:51] [Server thread/INFO]: Saving players
-[15:08:51] [Server thread/INFO]: Saving worlds
-[15:08:51] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[15:08:51] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[15:08:51] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[15:08:51] [Client Shutdown Thread/INFO]: Stopping server
-[15:08:51] [Client Shutdown Thread/INFO]: Saving players
+[20:31:16] [main/INFO]: Setting user: Player624
+[20:31:19] [Client thread/INFO]: LWJGL Version: 2.9.1
+[20:31:29] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Tutorial Mod
+[20:31:30] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
+[20:31:30] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[20:31:30] [Sound Library Loader/INFO]: Sound engine started
+[20:31:30] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Tutorial Mod
+[20:31:31] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[20:31:31] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[20:31:32] [Sound Library Loader/INFO]: Sound engine started
+[20:31:35] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:gui.button.press
+[20:31:35] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[20:31:35] [Server thread/INFO]: Generating keypair
+[20:31:36] [Server thread/INFO]: Preparing start region for level 0
+[20:31:37] [Server thread/INFO]: Preparing spawn area: 72%
+[20:31:37] [Server thread/INFO]: Changing view distance to 12, from 10
+[20:31:41] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:music.menu
+[20:31:41] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:gui.button.press
+[20:31:42] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:gui.button.press
+[20:31:42] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:gui.button.press
+[20:31:42] [Client thread/INFO]: Deleting level New World
+[20:31:42] [Client thread/INFO]: Attempt 1...
+[20:31:43] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:gui.button.press
+[20:31:44] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:gui.button.press
+[20:31:44] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:gui.button.press
+[20:31:44] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:gui.button.press
+[20:31:44] [Server thread/INFO]: Stopping server
+[20:31:44] [Server thread/INFO]: Saving players
+[20:31:44] [Server thread/INFO]: Saving worlds
+[20:31:44] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[20:31:44] [Server thread/WARN]: Failed to check session lock, aborting
+[20:31:44] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[20:31:44] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[20:31:45] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[20:31:45] [Server thread/INFO]: Generating keypair
+[20:31:45] [Server thread/INFO]: Converting map!
+[20:31:45] [Server thread/INFO]: Scanning folders...
+[20:31:45] [Server thread/INFO]: Total conversion count is 0
+[20:31:45] [Server thread/INFO]: Preparing start region for level 0
+[20:31:46] [Server thread/INFO]: Preparing spawn area: 11%
+[20:31:47] [Server thread/INFO]: Preparing spawn area: 26%
+[20:31:48] [Server thread/INFO]: Preparing spawn area: 47%
+[20:31:49] [Server thread/INFO]: Preparing spawn area: 70%
+[20:31:50] [Server thread/INFO]: Preparing spawn area: 95%
+[20:31:50] [Server thread/INFO]: Changing view distance to 12, from 10
+[20:31:51] [Server thread/INFO]: Player624[local:E:e174bf4b] logged in with entity id 591 at (-251.5, 64.0, 197.5)
+[20:31:51] [Server thread/INFO]: Player624 joined the game
+[20:31:52] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:mob.bat.takeoff
+[20:31:53] [Server thread/INFO]: Player624 has just earned the achievement [Taking Inventory]
+[20:31:53] [Client thread/INFO]: [CHAT] Player624 has just earned the achievement [Taking Inventory]
+[20:31:53] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:mob.bat.takeoff
+[20:31:55] [Client thread/INFO]: Warning: Clientside chunk ticking took 170 ms
+[20:31:55] [Client thread/INFO]: Warning: Clientside chunk ticking took 174 ms
+[20:31:56] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:dig.stone
+[20:31:56] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:dig.stone
+[20:31:57] [Client thread/INFO]: Warning: Clientside chunk ticking took 150 ms
+[20:31:58] [Client thread/INFO]: Warning: Clientside chunk ticking took 148 ms
+[20:31:58] [Client thread/INFO]: Warning: Clientside chunk ticking took 134 ms
+[20:31:58] [Client thread/INFO]: Warning: Clientside chunk ticking took 218 ms
+[20:31:59] [Client thread/INFO]: Warning: Clientside chunk ticking took 155 ms
+[20:31:59] [Client thread/INFO]: Warning: Clientside chunk ticking took 151 ms
+[20:31:59] [Client thread/INFO]: Warning: Clientside chunk ticking took 114 ms
+[20:31:59] [Client thread/INFO]: Warning: Clientside chunk ticking took 103 ms
+[20:32:00] [Client thread/INFO]: Warning: Clientside chunk ticking took 102 ms
+[20:32:01] [Client thread/INFO]: Warning: Clientside chunk ticking took 105 ms
+[20:32:01] [Client thread/INFO]: Warning: Clientside chunk ticking took 125 ms
+[20:32:05] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:music.game.creative
+[20:32:10] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:dig.stone
+[20:32:12] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.sand
+[20:32:14] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.sand
+[20:32:16] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.sand
+[20:32:17] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.sand
+[20:32:17] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.sand
+[20:32:17] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.sand
+[20:32:18] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.sand
+[20:32:19] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.sand
+[20:32:20] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.sand
+[20:32:20] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.sand
+[20:32:21] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.sand
+[20:32:21] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.sand
+[20:32:21] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:dig.stone
+[20:32:21] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:dig.stone
+[20:32:22] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:dig.stone
+[20:32:22] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:dig.stone
+[20:32:22] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:dig.stone
+[20:32:23] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.sand
+[20:32:26] [Server thread/INFO]: Saving and pausing game...
+[20:32:26] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[20:32:26] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[20:32:26] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[20:32:26] [Client thread/INFO]: Stopping!
+[20:32:26] [Server thread/INFO]: Stopping server
+[20:32:26] [Server thread/INFO]: Saving players
+[20:32:26] [Server thread/INFO]: Saving worlds
+[20:32:26] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[20:32:26] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[20:32:26] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[20:32:27] [Client Shutdown Thread/INFO]: Stopping server
+[20:32:27] [Client Shutdown Thread/INFO]: Saving players

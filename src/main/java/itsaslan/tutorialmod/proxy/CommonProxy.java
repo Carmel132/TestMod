@@ -10,13 +10,12 @@ import itsaslan.tutorialmod.crafting.TutorialCrafting;
 import itsaslan.tutorialmod.generation.stellarGeneration;
 import itsaslan.tutorialmod.items.TutorialModItems;
 import itsaslan.tutorialmod.register.registerGenerators;
-import itsaslan.tutorialmod.tileentity.TutorialTileEntity;
+import itsaslan.tutorialmod.register.registerTileEntities;
 
 public class CommonProxy {
 
     public void preInit(FMLPreInitializationEvent $e)
     {
-        TutorialTileEntity.init();
         TutorialModBlocks.init();
         TutorialModItems.init();
         registerGenerators.oreGen();
@@ -24,6 +23,7 @@ public class CommonProxy {
 
     public void init(FMLInitializationEvent $e)
     {
+        registerTileEntities.init();
         TutorialCrafting.init();
     }
 

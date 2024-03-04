@@ -13,6 +13,7 @@ public class TutorialModBlocks {
     public static Block waxCrop;
 
     public static Block waxChest;
+    public static Block testGuiBlock;
 
     public static void init()
     {
@@ -23,8 +24,9 @@ public class TutorialModBlocks {
         waxCrop = new TutorialCrop().setBlockName("waxCrop").setBlockTextureName(ModVars.MOD_ID + ":waxCrop");
         GameRegistry.registerBlock(waxCrop, waxCrop.getUnlocalizedName());
 
-        waxChest = new WaxChest(0).setBlockName("waxChest").setCreativeTab(CreativeTabs.tabBlock).setBlockTextureName(ModVars.MOD_ID + ":waxChest");
-        GameRegistry.registerBlock(waxChest, waxChest.getUnlocalizedName());
+        testGuiBlock = new TestGuiBlock(Material.rock).setBlockName("testGuiBlock").setCreativeTab(CreativeTabs.tabAllSearch);
+        GameRegistry.registerBlock(testGuiBlock, testGuiBlock.getUnlocalizedName());
+
     }
 
 }

@@ -7,9 +7,6 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import itsaslan.tutorialmod.blocks.TutorialBlock;
 import itsaslan.tutorialmod.blocks.TutorialModBlocks;
-import itsaslan.tutorialmod.render.item.ItemRenderWaxChest;
-import itsaslan.tutorialmod.render.tileentity.WaxChestRenderer;
-import itsaslan.tutorialmod.tileentity.TileEntityWaxChest;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.MinecraftForgeClient;
 
@@ -19,8 +16,6 @@ public class ClientProxy extends CommonProxy {
     {
         super.preInit($e);
 
-        ClientRegistry.bindTileEntitySpecialRenderer(TileEntityWaxChest.class, new WaxChestRenderer());
-        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(TutorialModBlocks.waxChest), new ItemRenderWaxChest());
     }
 
     public void init(FMLInitializationEvent $e)
