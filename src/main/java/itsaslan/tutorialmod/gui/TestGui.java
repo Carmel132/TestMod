@@ -2,8 +2,10 @@ package itsaslan.tutorialmod.gui;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import itsaslan.tutorialmod.blocks.TestGuiBlock;
 import itsaslan.tutorialmod.containers.ContainerGeneric;
 import itsaslan.tutorialmod.lib.ModVars;
+import itsaslan.tutorialmod.tileentity.TestTileEntity;
 import net.minecraft.block.Block;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -20,10 +22,23 @@ public class TestGui extends GuiContainer {
 
     public TestGui(InventoryPlayer inventoryPlayer, TileEntity tileEntity, Block block) {
         super(new ContainerGeneric(inventoryPlayer, tileEntity));
+        this.xSize = 176;
+        this.ySize = 166;
     }
 
     @Override
-    protected void drawGuiContainerBackgroundLayer(float parrtialTicks, int mouseX, int mouseY) {
+    protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
+        // Draw the container's name at the top-center
+        String name = "Custom GUI";
+        int nameWidth = fontRendererObj.getStringWidth(name);
+        fontRendererObj.drawString(name, (xSize / 2) - (nameWidth / 2), 6, 0x404040);
+
+        // Draw the player's inventory label
+        fontRendererObj.drawString("Inventory", 8, ySize - 96 + 2, 0x404040);
+    }
+
+    @Override
+    protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
         GL11.glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
         mc.getTextureManager().bindTexture(TEXTURE);
         int startX = (width - xSize) / 2;

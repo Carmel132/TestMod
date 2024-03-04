@@ -1,7 +1,6 @@
 package itsaslan.tutorialmod.blocks;
 
 import itsaslan.tutorialmod.tileentity.TestTileEntity;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
