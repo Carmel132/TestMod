@@ -29,9 +29,9 @@ public class TestGui extends GuiContainer {
     @Override
     protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
         // Draw the container's name at the top-center
-        String name = "Custom GUI";
+        String name = "Red Chest";
         int nameWidth = fontRendererObj.getStringWidth(name);
-        fontRendererObj.drawString(name, (xSize / 2) - (nameWidth / 2), 6, 0x404040);
+        fontRendererObj.drawString(name, 8, 6, 0x404040);
 
         // Draw the player's inventory label
         fontRendererObj.drawString("Inventory", 8, ySize - 96 + 2, 0x404040);
