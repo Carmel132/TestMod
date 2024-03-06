@@ -39,6 +39,8 @@ public class TutorialCrafting {
 
         GameRegistry.addRecipe(new ItemStack(TutorialModBlocks.waxChest), new Object[]{"IKI", "I I", "III", 'I', TutorialModItems.wax, 'K', Blocks.glass_pane});
 
+        GameRegistry.addRecipe(new ItemStack(TutorialModBlocks.testCraftingTableBlock), new Object[]{"III", "OKO", "JJJ", 'I', Blocks.iron_block, 'O', TutorialModItems.wax, 'K', Blocks.crafting_table, 'J', Blocks.stonebrick});
+
     }
 
 }

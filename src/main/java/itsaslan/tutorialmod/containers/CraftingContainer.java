@@ -16,22 +16,21 @@ public class CraftingContainer extends Container
     private IInventory inventory;
 
     private static final int CRAFTING_INPUT_COLUMNS = 3;
-    private static final int CRAFTING_INPUT_ROWS = 3;
+    private static final int CRAFTING_INPUT_ROWS = 1;
 
     public CraftingContainer(InventoryPlayer playerInventory, TileEntity tileEntity)
     {
         this.inventory = (IInventory) tileEntity;
         this.craftingMatrix = new InventoryCrafting(this, CRAFTING_INPUT_COLUMNS, CRAFTING_INPUT_ROWS);
 
+
+
         for (int i = 0; i < CRAFTING_INPUT_COLUMNS; ++i)
         {
-            for(int j = 0; j < CRAFTING_INPUT_ROWS; ++j)
-            {
-                this.addSlotToContainer(new Slot(craftingMatrix, j + i * CRAFTING_INPUT_COLUMNS, 30 + j * 18, 17 + i * 18));
-            }
+            this.addSlotToContainer(new Slot(craftingMatrix, i, 30 + i * 18, 35));
         }
 
-        this.addSlotToContainer(new SlotCrafting(playerInventory.player, craftingMatrix, craftResult, 11, 124, 35));
+        this.addSlotToContainer(new SlotCrafting(playerInventory.player, craftingMatrix, craftResult, 0, 124, 35));
 
         for (int i = 0; i < 3; ++i) {
             for (int j = 0; j < 9; ++j) {
@@ -55,10 +54,9 @@ public class CraftingContainer extends Container
 
     private void updateCraftingResults() {
         ItemStack result = RecipeHandler.findMatchingRecipe(craftingMatrix);
-        if(result != null)
-        {
-            craftResult.setInventorySlotContents(0, result);
-        }
+
+        craftResult.setInventorySlotContents(0, result);
+
     }
 
     @Override

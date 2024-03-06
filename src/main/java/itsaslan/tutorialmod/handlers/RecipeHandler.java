@@ -2,6 +2,7 @@ package itsaslan.tutorialmod.handlers;
 
 import itsaslan.tutorialmod.recipes.BasicRecipe;
 import net.minecraft.inventory.InventoryCrafting;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 

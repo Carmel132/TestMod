@@ -10,7 +10,7 @@ import itsaslan.tutorialmod.crafting.TutorialCrafting;
 import itsaslan.tutorialmod.generation.stellarGeneration;
 import itsaslan.tutorialmod.items.TutorialModItems;
 import itsaslan.tutorialmod.register.registerGenerators;
-import itsaslan.tutorialmod.register.registerRecipes;
+import itsaslan.tutorialmod.register.registerCustomRecipes;
 import itsaslan.tutorialmod.register.registerTileEntities;
 
 public class CommonProxy {
@@ -26,7 +26,7 @@ public class CommonProxy {
     {
         registerTileEntities.init();
         TutorialCrafting.init();
-        registerRecipes.init();
+        registerCustomRecipes.init();
     }
 
     public void postInit(FMLPostInitializationEvent $e)

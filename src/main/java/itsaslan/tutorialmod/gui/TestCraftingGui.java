@@ -24,7 +24,7 @@ public class TestCraftingGui extends GuiContainer
 
     protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
         // Draw the container's name at the top-center
-        String name = "Test Crafting";
+        String name = "Gem Workbench";
         int nameWidth = fontRendererObj.getStringWidth(name);
         fontRendererObj.drawString(name, 8, 6, 0x404040);
 

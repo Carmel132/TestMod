@@ -15,7 +15,7 @@ item.stellarLeggings.name=Stellar Leggings
 
 item.stellarGem.name=Stellar Gem
 
-item.wax.name=Wax
+item.wax.name=Cube of Wax
 item.waxSeed.name=Wax Seed
 tile.waxCrop.name=Wax Crop
 
@@ -27,3 +27,4 @@ tile.waxChest.name=Wax Chest
 tile.waxFurnace.name=Wax Furnace
 
 tile.testGuiBlock.name=Red Chest
+tile.testCraftingTableBlock.name=Gem Workbench

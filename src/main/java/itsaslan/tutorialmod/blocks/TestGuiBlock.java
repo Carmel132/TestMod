@@ -43,7 +43,6 @@ public class TestGuiBlock extends BlockContainer
     public void registerBlockIcons(IIconRegister reg) {
         icons = new IIcon[6]; // One for each side
 
-        // Assuming you have different textures named side0.png, side1.png, ..., side5.png in assets/yourmodid/textures/blocks/
         icons[0] = reg.registerIcon(ModVars.MOD_ID + ":tile.TestGuiBlockBottom"); // Bottom
         icons[1] = reg.registerIcon(ModVars.MOD_ID + ":tile.TestGuiBlockTop"); // Top
         icons[2] = reg.registerIcon(ModVars.MOD_ID + ":tile.TestGuiBlockSideUniversal"); // North
