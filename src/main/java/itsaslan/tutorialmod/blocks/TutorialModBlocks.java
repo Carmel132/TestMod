@@ -13,7 +13,9 @@ public class TutorialModBlocks {
     public static Block waxCrop;
 
     public static Block waxChest;
+
     public static Block testGuiBlock;
+    public static Block testCraftingTableBlock;
 
     public static void init()
     {
@@ -26,6 +28,9 @@ public class TutorialModBlocks {
 
         testGuiBlock = new TestGuiBlock(Material.rock).setBlockName("testGuiBlock").setCreativeTab(CreativeTabs.tabAllSearch);
         GameRegistry.registerBlock(testGuiBlock, testGuiBlock.getUnlocalizedName());
+
+        testCraftingTableBlock = new TestCraftingTableBlock(Material.rock).setBlockName("testCraftingTableBlock").setCreativeTab(CreativeTabs.tabAllSearch);
+        GameRegistry.registerBlock(testCraftingTableBlock, testCraftingTableBlock.getUnlocalizedName());
 
     }
 
