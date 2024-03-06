@@ -1,5 +1,6 @@
 package itsaslan.tutorialmod.containers;
 
+import itsaslan.tutorialmod.handlers.RecipeHandler;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.*;
@@ -26,7 +27,7 @@ public class CraftingContainer extends Container
         {
             for(int j = 0; j < CRAFTING_INPUT_ROWS; ++j)
             {
-                this.addSlotToContainer(new Slot(inventory, j + i * CRAFTING_INPUT_COLUMNS, 30 + j * 18, 17 + i * 18));
+                this.addSlotToContainer(new Slot(craftingMatrix, j + i * CRAFTING_INPUT_COLUMNS, 30 + j * 18, 17 + i * 18));
             }
         }
 
@@ -40,6 +41,23 @@ public class CraftingContainer extends Container
 
         for (int i = 0; i < 9; ++i) {
             this.addSlotToContainer(new Slot(playerInventory, i, 8 + i * 18, 142));
+        }
+    }
+
+    // Override to use craftMatrix for crafting logic
+    @Override
+    public void onCraftMatrixChanged(IInventory inventory) {
+        super.onCraftMatrixChanged(inventory);
+        if (inventory == craftingMatrix) {
+            updateCraftingResults();
+        }
+    }
+
+    private void updateCraftingResults() {
+        ItemStack result = RecipeHandler.findMatchingRecipe(craftingMatrix);
+        if(result != null)
+        {
+            craftResult.setInventorySlotContents(0, result);
         }
     }
 
