@@ -15,10 +15,12 @@ public class TutorialCrafting {
 
         GameRegistry.addSmelting(TutorialModBlocks.stellarOre, new ItemStack(TutorialModItems.stellarIngot), 10.0f);
         //GameRegistry.addSmelting(Items.iron_ingot, new ItemStack(TutorialModItems.stellarIngot), 10.0f);
+        GameRegistry.addSmelting(TutorialModItems.steelMix, new ItemStack(TutorialModItems.steelIngot, 2), 10.0f);
+
         GameRegistry.addRecipe(new ItemStack(TutorialModBlocks.blockOfStellarOre), new Object[]{"III", "III", "III", 'I', TutorialModItems.stellarIngot});
 
         //GameRegistry.addRecipe(new ItemStack(TutorialModItems.stellarGem), new Object[]{"III", "IKI", "III", 'I', TutorialModItems.stellarIngot, 'K', Items.nether_star});
-        GameRegistry.addShapelessRecipe(new ItemStack(TutorialModItems.stellarGem), new Object[]{TutorialModItems.wax, TutorialModItems.sandPaper, TutorialModItems.stellarIngot});
+        //GameRegistry.addShapelessRecipe(new ItemStack(TutorialModItems.stellarGem), new Object[]{TutorialModItems.wax, TutorialModItems.sandPaper, TutorialModItems.stellarIngot});
 
         GameRegistry.addRecipe(new ItemStack(TutorialModItems.stellarHelmet), new Object[]{"III", "I I", 'I', TutorialModItems.stellarGem});
         GameRegistry.addRecipe(new ItemStack(TutorialModItems.stellarChestplate), new Object[]{"I I", "III", "III", 'I', TutorialModItems.stellarGem});
@@ -36,10 +38,11 @@ public class TutorialCrafting {
 
         GameRegistry.addRecipe(new ItemStack(TutorialModItems.stellarIngot), new Object[]{"III", "III", "III", 'I', TutorialModItems.stellarNugget});
         GameRegistry.addShapelessRecipe(new ItemStack(TutorialModItems.stellarNugget, 9), new Object[]{TutorialModItems.stellarIngot});
+        GameRegistry.addShapelessRecipe(new ItemStack(TutorialModItems.steelMix, 4), new Object[]{Items.coal, Items.iron_ingot});
 
         GameRegistry.addRecipe(new ItemStack(TutorialModBlocks.waxChest), new Object[]{"IKI", "I I", "III", 'I', TutorialModItems.wax, 'K', Blocks.glass_pane});
 
-        GameRegistry.addRecipe(new ItemStack(TutorialModBlocks.testCraftingTableBlock), new Object[]{"III", "OKO", "JJJ", 'I', Blocks.iron_block, 'O', TutorialModItems.wax, 'K', Blocks.crafting_table, 'J', Blocks.stonebrick});
+        GameRegistry.addRecipe(new ItemStack(TutorialModBlocks.testCraftingTableBlock), new Object[]{"III", "OKO", "III", 'I', TutorialModItems.steelIngot, 'O', TutorialModItems.wax, 'K', Blocks.crafting_table});
 
     }
 

@@ -20,6 +20,8 @@ public class TutorialModItems {
     public static Item stellarIngot;
     public static Item stellarGem;
     public static Item stellarNugget;
+    public static Item steelIngot;
+    public static Item steelMix;
 
     public static ItemSword stellarSword;
     public static ItemPickaxe stellarPickaxe;
@@ -75,6 +77,14 @@ public class TutorialModItems {
         stellarNugget = new Item().setUnlocalizedName("stellarNugget").setCreativeTab(CreativeTabs.tabMaterials);
         stellarNugget.setTextureName(ModVars.MOD_ID + ":" + stellarNugget.getUnlocalizedName());
         GameRegistry.registerItem(stellarNugget, stellarNugget.getUnlocalizedName());
+
+        steelIngot = new Item().setUnlocalizedName("steelIngot").setCreativeTab(CreativeTabs.tabMaterials);
+        steelIngot.setTextureName(ModVars.MOD_ID + ":" + steelIngot.getUnlocalizedName());
+        GameRegistry.registerItem(steelIngot, steelIngot.getUnlocalizedName());
+
+        steelMix = new Item().setUnlocalizedName("steelMix").setCreativeTab(CreativeTabs.tabMaterials);
+        steelMix.setTextureName(ModVars.MOD_ID + ":" + steelMix.getUnlocalizedName());
+        GameRegistry.registerItem(steelMix, steelMix.getUnlocalizedName());
 
         // Tools
 

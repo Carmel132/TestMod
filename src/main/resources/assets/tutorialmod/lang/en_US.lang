@@ -28,3 +28,5 @@ tile.waxFurnace.name=Wax Furnace
 
 tile.testGuiBlock.name=Red Chest
 tile.testCraftingTableBlock.name=Gem Workbench
+item.steelIngot.name=Steel Ingot
+item.steelMix.name=Steel Mix
