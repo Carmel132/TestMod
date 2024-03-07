@@ -27,6 +27,7 @@ public class CraftingContainer extends Container
 
         for (int i = 0; i < CRAFTING_INPUT_COLUMNS; ++i)
         {
+            // the index in this constructor ----------------↓ breaks at certain values idk theres probably a reason for it but just keep an eye on it
             this.addSlotToContainer(new Slot(craftingMatrix, i, 30 + i * 18, 35));
         }
 
