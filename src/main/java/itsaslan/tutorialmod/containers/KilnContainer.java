@@ -7,7 +7,7 @@ import net.minecraft.inventory.*;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 
-public class CraftingContainer extends Container
+public class KilnContainer extends Container
 {
 
     private InventoryCrafting craftingMatrix;
@@ -15,20 +15,19 @@ public class CraftingContainer extends Container
 
     private IInventory inventory;
 
-    private static final int CRAFTING_INPUT_COLUMNS = 3;
-    private static final int CRAFTING_INPUT_ROWS = 1;
+    private static final int CRAFTING_INPUT_COLUMNS = 1;
+    private static final int CRAFTING_INPUT_ROWS = 2;
 
-    public CraftingContainer(InventoryPlayer playerInventory, TileEntity tileEntity)
+
+    public KilnContainer(InventoryPlayer playerInventory, TileEntity tileEntity)
     {
+
         this.inventory = (IInventory) tileEntity;
         this.craftingMatrix = new InventoryCrafting(this, CRAFTING_INPUT_COLUMNS, CRAFTING_INPUT_ROWS);
 
-
-
-        for (int i = 0; i < CRAFTING_INPUT_COLUMNS; ++i)
+        for (int i = 0; i < 2; ++i)
         {
-            // the index in this constructor ----------------↓ breaks at certain values idk theres probably a reason for it but just keep an eye on it
-            this.addSlotToContainer(new Slot(craftingMatrix, i, 30 + i * 18, 35));
+            this.addSlotToContainer(new Slot(craftingMatrix, i, 35, 24 + i * 22));
         }
 
         this.addSlotToContainer(new SlotCrafting(playerInventory.player, craftingMatrix, craftResult, 0, 124, 35));
@@ -42,9 +41,9 @@ public class CraftingContainer extends Container
         for (int i = 0; i < 9; ++i) {
             this.addSlotToContainer(new Slot(playerInventory, i, 8 + i * 18, 142));
         }
+
     }
 
-    // Override to use craftMatrix for crafting logic
     @Override
     public void onCraftMatrixChanged(IInventory inventory) {
         super.onCraftMatrixChanged(inventory);
@@ -54,12 +53,11 @@ public class CraftingContainer extends Container
     }
 
     private void updateCraftingResults() {
-        ItemStack result = RecipeHandler.findMatchingRecipeBasic(craftingMatrix);
+        ItemStack result = RecipeHandler.findMatchingRecipeKiln(craftingMatrix);
 
         craftResult.setInventorySlotContents(0, result);
 
     }
-
     @Override
     public ItemStack transferStackInSlot(EntityPlayer player, int index) {
         ItemStack itemstack = null;
@@ -95,4 +93,5 @@ public class CraftingContainer extends Container
     public boolean canInteractWith(EntityPlayer player) {
         return true;
     }
+
 }

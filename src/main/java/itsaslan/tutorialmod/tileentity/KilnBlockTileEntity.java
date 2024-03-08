@@ -1,7 +1,5 @@
 package itsaslan.tutorialmod.tileentity;
 
-import itsaslan.tutorialmod.Main;
-import itsaslan.tutorialmod.handlers.GuiHandler;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
@@ -9,9 +7,8 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
 
-public class TestCraftingTileEntity extends TileEntity implements IInventory
+public class KilnBlockTileEntity extends TileEntity implements IInventory
 {
-
     private final ItemStack[] inventoryContents = new ItemStack[27];
 
     @Override
@@ -116,7 +113,7 @@ public class TestCraftingTileEntity extends TileEntity implements IInventory
 
     @Override
     public String getInventoryName() {
-        return "Custom Chest";
+        return "Kiln";
     }
 
     @Override

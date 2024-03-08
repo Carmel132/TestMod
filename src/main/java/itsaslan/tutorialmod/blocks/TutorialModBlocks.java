@@ -16,6 +16,7 @@ public class TutorialModBlocks {
 
     public static Block testGuiBlock;
     public static Block testCraftingTableBlock;
+    public static Block kilnBlock;
 
     public static void init()
     {
@@ -31,6 +32,9 @@ public class TutorialModBlocks {
 
         testCraftingTableBlock = new TestCraftingTableBlock(Material.rock).setBlockName("testCraftingTableBlock").setCreativeTab(CreativeTabs.tabAllSearch);
         GameRegistry.registerBlock(testCraftingTableBlock, testCraftingTableBlock.getUnlocalizedName());
+
+        kilnBlock = new KilnBlock(Material.rock).setBlockName("Kiln").setCreativeTab(CreativeTabs.tabDecorations);
+        GameRegistry.registerBlock(kilnBlock, kilnBlock.getUnlocalizedName());
 
     }
 

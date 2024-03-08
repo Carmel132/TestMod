@@ -3,12 +3,12 @@ package itsaslan.tutorialmod.recipes;
 import net.minecraft.inventory.Container;
 import net.minecraft.item.ItemStack;
 
-public class BasicRecipe
+public class KilnRecipe
 {
     private ItemStack[] inputs;
     private ItemStack output;
 
-    public BasicRecipe(ItemStack output, ItemStack... input)
+    public KilnRecipe(ItemStack output, ItemStack... input)
     {
         this.output = output;
         this.inputs = input;

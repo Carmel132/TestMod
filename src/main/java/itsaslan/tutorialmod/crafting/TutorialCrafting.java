@@ -15,7 +15,7 @@ public class TutorialCrafting {
 
         GameRegistry.addSmelting(TutorialModBlocks.stellarOre, new ItemStack(TutorialModItems.stellarIngot), 10.0f);
         //GameRegistry.addSmelting(Items.iron_ingot, new ItemStack(TutorialModItems.stellarIngot), 10.0f);
-        GameRegistry.addSmelting(TutorialModItems.steelMix, new ItemStack(TutorialModItems.steelIngot, 2), 10.0f);
+        //GameRegistry.addSmelting(TutorialModItems.steelMix, new ItemStack(TutorialModItems.steelIngot, 2), 10.0f);
 
         GameRegistry.addRecipe(new ItemStack(TutorialModBlocks.blockOfStellarOre), new Object[]{"III", "III", "III", 'I', TutorialModItems.stellarIngot});
 
