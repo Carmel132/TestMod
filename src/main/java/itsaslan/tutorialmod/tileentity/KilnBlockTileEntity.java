@@ -11,6 +11,27 @@ public class KilnBlockTileEntity extends TileEntity implements IInventory
 {
     private final ItemStack[] inventoryContents = new ItemStack[27];
 
+    private boolean isKilnOn = false;
+
+    @Override
+    public void updateEntity()
+    {
+        super.updateEntity();
+        if (isKilnOn) {
+            double x = xCoord + 0.5 + Math.random() * 0.5 - 0.25;
+            double y = yCoord + 1.0;
+            double z = zCoord + 0.5 + Math.random() * 0.5 - 0.25;
+            worldObj.spawnParticle("flame", x, y, z, xCoord, yCoord, zCoord);
+            // Consider adding some randomness to the particle position for a more natural effect
+        }
+    }
+
+    public void setKilnOn(boolean isOn) {
+        this.isKilnOn = isOn;
+        System.out.println("Updated Kiln: " + isKilnOn);
+        markDirty(); // Mark the tile entity as needing to save
+    }
+
     @Override
     public void writeToNBT(NBTTagCompound compound) {
         super.writeToNBT(compound);

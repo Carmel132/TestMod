@@ -1,5 +1,6 @@
 package itsaslan.tutorialmod.containers;
 
+import itsaslan.tutorialmod.blocks.KilnBlock;
 import itsaslan.tutorialmod.handlers.RecipeHandler;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -12,6 +13,7 @@ public class KilnContainer extends Container
 
     private InventoryCrafting craftingMatrix;
     private IInventory craftResult = new InventoryCraftResult();
+    private KilnBlock kiln;
 
     private IInventory inventory;
 
@@ -24,6 +26,7 @@ public class KilnContainer extends Container
 
         this.inventory = (IInventory) tileEntity;
         this.craftingMatrix = new InventoryCrafting(this, CRAFTING_INPUT_COLUMNS, CRAFTING_INPUT_ROWS);
+        this.kiln = (KilnBlock) tileEntity.getBlockType();
 
         for (int i = 0; i < 2; ++i)
         {
@@ -47,7 +50,7 @@ public class KilnContainer extends Container
     @Override
     public void onCraftMatrixChanged(IInventory inventory) {
         super.onCraftMatrixChanged(inventory);
-        if (inventory == craftingMatrix) {
+        if (inventory == craftingMatrix && kiln.fireLit) {
             updateCraftingResults();
         }
     }
