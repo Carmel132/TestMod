@@ -30,3 +30,7 @@ tile.testGuiBlock.name=Red Chest
 tile.testCraftingTableBlock.name=Gem Workbench
 item.steelIngot.name=Steel Ingot
 item.steelMix.name=Steel Mix
+item.cloth.name=Cloth
+item.emeraldMix.name=Emerald Mix
+
+tile.Kiln.name=Kiln

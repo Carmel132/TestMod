@@ -2,6 +2,7 @@ package itsaslan.tutorialmod.containers;
 
 import itsaslan.tutorialmod.blocks.KilnBlock;
 import itsaslan.tutorialmod.handlers.RecipeHandler;
+import itsaslan.tutorialmod.tileentity.KilnBlockTileEntity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.*;
@@ -13,7 +14,7 @@ public class KilnContainer extends Container
 
     private InventoryCrafting craftingMatrix;
     private IInventory craftResult = new InventoryCraftResult();
-    private KilnBlock kiln;
+    private KilnBlockTileEntity kilnTileEntity;
 
     private IInventory inventory;
 
@@ -26,7 +27,7 @@ public class KilnContainer extends Container
 
         this.inventory = (IInventory) tileEntity;
         this.craftingMatrix = new InventoryCrafting(this, CRAFTING_INPUT_COLUMNS, CRAFTING_INPUT_ROWS);
-        this.kiln = (KilnBlock) tileEntity.getBlockType();
+        this.kilnTileEntity = (KilnBlockTileEntity) tileEntity;
 
         for (int i = 0; i < 2; ++i)
         {
@@ -50,7 +51,8 @@ public class KilnContainer extends Container
     @Override
     public void onCraftMatrixChanged(IInventory inventory) {
         super.onCraftMatrixChanged(inventory);
-        if (inventory == craftingMatrix && kiln.fireLit) {
+        System.out.println("Timer: " + kilnTileEntity.getActiveTimer());
+        if (inventory == craftingMatrix && kilnTileEntity.getActiveTimer() != 0) {
             updateCraftingResults();
         }
     }

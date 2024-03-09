@@ -15,7 +15,7 @@ public class TutorialCrafting {
 
         GameRegistry.addSmelting(TutorialModBlocks.stellarOre, new ItemStack(TutorialModItems.stellarIngot), 10.0f);
         //GameRegistry.addSmelting(Items.iron_ingot, new ItemStack(TutorialModItems.stellarIngot), 10.0f);
-        //GameRegistry.addSmelting(TutorialModItems.steelMix, new ItemStack(TutorialModItems.steelIngot, 2), 10.0f);
+        GameRegistry.addSmelting(TutorialModItems.steelMix, new ItemStack(TutorialModItems.steelIngot, 2), 10.0f);
 
         GameRegistry.addRecipe(new ItemStack(TutorialModBlocks.blockOfStellarOre), new Object[]{"III", "III", "III", 'I', TutorialModItems.stellarIngot});
 
@@ -44,6 +44,7 @@ public class TutorialCrafting {
 
         GameRegistry.addRecipe(new ItemStack(TutorialModBlocks.testCraftingTableBlock), new Object[]{"III", "OKO", "III", 'I', TutorialModItems.steelIngot, 'O', TutorialModItems.wax, 'K', Blocks.crafting_table});
 
+        GameRegistry.addRecipe(new ItemStack(TutorialModItems.cloth, 8), new Object[]{"IK", "KI", 'I', Items.string, 'K', Blocks.wool});
     }
 
 }

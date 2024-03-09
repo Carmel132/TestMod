@@ -38,6 +38,8 @@ public class TutorialModItems {
     public static Item wax;
 
     public static Item sandPaper;
+    public static Item cloth;
+    public static Item emeraldMix;
 
     public static void init()
     {
@@ -85,6 +87,14 @@ public class TutorialModItems {
         steelMix = new Item().setUnlocalizedName("steelMix").setCreativeTab(CreativeTabs.tabMaterials);
         steelMix.setTextureName(ModVars.MOD_ID + ":" + steelMix.getUnlocalizedName());
         GameRegistry.registerItem(steelMix, steelMix.getUnlocalizedName());
+
+        cloth = new Item().setUnlocalizedName("cloth").setCreativeTab(CreativeTabs.tabMaterials);
+        cloth.setTextureName(ModVars.MOD_ID + ":" + cloth.getUnlocalizedName());
+        GameRegistry.registerItem(cloth, cloth.getUnlocalizedName());
+
+        emeraldMix = new Item().setUnlocalizedName("emeraldMix").setCreativeTab(CreativeTabs.tabMaterials);
+        emeraldMix.setTextureName(ModVars.MOD_ID + ":" + emeraldMix.getUnlocalizedName());
+        GameRegistry.registerItem(emeraldMix, emeraldMix.getUnlocalizedName());
 
         // Tools
 

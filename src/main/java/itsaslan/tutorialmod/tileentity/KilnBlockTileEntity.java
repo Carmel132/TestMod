@@ -5,37 +5,79 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
+import net.minecraft.network.NetworkManager;
+import net.minecraft.network.Packet;
+import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
 
 public class KilnBlockTileEntity extends TileEntity implements IInventory
 {
     private final ItemStack[] inventoryContents = new ItemStack[27];
 
-    private boolean isKilnOn = false;
+    private int activeTimer;
+
+    public void setActiveTimer(int value)
+    {
+        activeTimer = value;
+    }
+
+    public int getActiveTimer()
+    {
+        return activeTimer;
+    }
 
     @Override
     public void updateEntity()
     {
         super.updateEntity();
-        if (isKilnOn) {
+
+        //System.out.println(String.format("Time: %d, Timer: %d, Instance: %s", worldObj.getTotalWorldTime(), activeTimer, this));
+
+        if(!worldObj.isRemote)
+        {
+            if(activeTimer > 0)
+            {
+                activeTimer = activeTimer - 1;
+                this.markDirty(); // Mark the TileEntity as having changed
+                worldObj.markBlockForUpdate(xCoord, yCoord, zCoord); // Request an update on the client side
+            }
+
+            if(activeTimer == 0)
+            {
+                int meta = 0;
+                worldObj.setBlockMetadataWithNotify(xCoord, yCoord, zCoord, meta, 2);
+            }
+
+        }
+
+
+        if (activeTimer > 0 && activeTimer % 3 == 1) // activeTimer % 3 == 1 is to make particles appear 6 times instead of 20 per second
+        {
             double x = xCoord + 0.5 + Math.random() * 0.5 - 0.25;
-            double y = yCoord + 1.0;
-            double z = zCoord + 0.5 + Math.random() * 0.5 - 0.25;
-            worldObj.spawnParticle("flame", x, y, z, xCoord, yCoord, zCoord);
+            double y = yCoord + 0.2;
+            double z = zCoord + 1.1;
+            worldObj.spawnParticle("flame", x, y, z, 0, 0.01D, 0);
             // Consider adding some randomness to the particle position for a more natural effect
         }
     }
 
-    public void setKilnOn(boolean isOn) {
-        this.isKilnOn = isOn;
-        System.out.println("Updated Kiln: " + isKilnOn);
-        markDirty(); // Mark the tile entity as needing to save
+    @Override
+    public Packet getDescriptionPacket() {
+        NBTTagCompound tag = new NBTTagCompound();
+        this.writeToNBT(tag);
+        return new S35PacketUpdateTileEntity(this.xCoord, this.yCoord, this.zCoord, 1, tag);
+    }
+
+    @Override
+    public void onDataPacket(NetworkManager net, S35PacketUpdateTileEntity pkt) {
+        readFromNBT(pkt.func_148857_g());
     }
 
     @Override
     public void writeToNBT(NBTTagCompound compound) {
         super.writeToNBT(compound);
         NBTTagList items = new NBTTagList();
+        compound.setInteger("ActiveTimer", activeTimer);
 
         for (int i = 0; i < this.inventoryContents.length; ++i) {
             if (this.inventoryContents[i] != null) {
@@ -53,6 +95,7 @@ public class KilnBlockTileEntity extends TileEntity implements IInventory
     public void readFromNBT(NBTTagCompound compound) {
         super.readFromNBT(compound);
         NBTTagList items = compound.getTagList("Items", 10); // 10 is the tag type for NBTTagCompound
+        activeTimer = compound.getInteger("ActiveTimer");
 
         for (int i = 0; i < items.tagCount(); ++i) {
             NBTTagCompound item = items.getCompoundTagAt(i);

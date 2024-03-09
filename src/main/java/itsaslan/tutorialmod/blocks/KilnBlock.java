@@ -4,6 +4,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import itsaslan.tutorialmod.Main;
 import itsaslan.tutorialmod.handlers.GuiHandler;
+import itsaslan.tutorialmod.items.TutorialModItems;
 import itsaslan.tutorialmod.lib.ModVars;
 import itsaslan.tutorialmod.tileentity.KilnBlockTileEntity;
 import net.minecraft.block.BlockContainer;
@@ -24,8 +25,6 @@ public class KilnBlock extends BlockContainer
     private IIcon isOnFireIcon;
     private IIcon frontIcon;
 
-    public boolean fireLit = false;
-
     protected KilnBlock(Material material) {
         super(material);
     }
@@ -42,21 +41,25 @@ public class KilnBlock extends BlockContainer
             {
                 if(player.inventory.getCurrentItem() != null)
                 {
-                    if(player.inventory.getCurrentItem().getItem() != Items.flint_and_steel && player.inventory.getCurrentItem().getItem() != Items.slime_ball)
+                    if(player.inventory.getCurrentItem().getItem() != Items.flint_and_steel && player.inventory.getCurrentItem().getItem() != TutorialModItems.cloth && player.inventory.getCurrentItem().getItem() != Items.lava_bucket)
                     {
                         player.openGui(Main.instance, GuiHandler.KILN_GUI, world, x, y, z);
                     }
                     else if(player.inventory.getCurrentItem().getItem() == Items.flint_and_steel)
                     {
-                        fireLit = true;
-                        ((KilnBlockTileEntity) hitTileEntity).setKilnOn(fireLit);
+                        ((KilnBlockTileEntity) hitTileEntity).setActiveTimer(100);
                         int newMeta = 1;
                         world.setBlockMetadataWithNotify(x, y, z, newMeta, 2);
                     }
-                    else if(player.inventory.getCurrentItem().getItem() == Items.slime_ball)
+                    else if(player.inventory.getCurrentItem().getItem() == Items.lava_bucket)
                     {
-                        fireLit = false;
-                        ((KilnBlockTileEntity) hitTileEntity).setKilnOn(fireLit);
+                        ((KilnBlockTileEntity) hitTileEntity).setActiveTimer(1000);
+                        int newMeta = 1;
+                        world.setBlockMetadataWithNotify(x, y, z, newMeta, 2);
+                    }
+                    else if(player.inventory.getCurrentItem().getItem() == TutorialModItems.cloth)
+                    {
+                        ((KilnBlockTileEntity) hitTileEntity).setActiveTimer(0);
                         int newMeta = 2;
                         world.setBlockMetadataWithNotify(x, y, z, newMeta, 2);
                     }
