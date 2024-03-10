@@ -41,6 +41,13 @@ public class TutorialModItems {
     public static Item cloth;
     public static Item emeraldMix;
 
+    public static Item copperMix;
+    public static Item copperIngot;
+
+    public static Item infusingRod;
+
+    public static Item blackBrick;
+
     public static void init()
     {
 
@@ -95,6 +102,22 @@ public class TutorialModItems {
         emeraldMix = new Item().setUnlocalizedName("emeraldMix").setCreativeTab(CreativeTabs.tabMaterials);
         emeraldMix.setTextureName(ModVars.MOD_ID + ":" + emeraldMix.getUnlocalizedName());
         GameRegistry.registerItem(emeraldMix, emeraldMix.getUnlocalizedName());
+
+        copperMix = new Item().setUnlocalizedName("copperMix").setCreativeTab(CreativeTabs.tabMaterials);
+        copperMix.setTextureName(ModVars.MOD_ID + ":" + copperMix.getUnlocalizedName());
+        GameRegistry.registerItem(copperMix, copperMix.getUnlocalizedName());
+
+        copperIngot = new Item().setUnlocalizedName("copperIngot").setCreativeTab(CreativeTabs.tabMaterials);
+        copperIngot.setTextureName(ModVars.MOD_ID + ":" + copperIngot.getUnlocalizedName());
+        GameRegistry.registerItem(copperIngot, copperIngot.getUnlocalizedName());
+
+        infusingRod = new Item().setUnlocalizedName("infusingRod").setCreativeTab(CreativeTabs.tabMisc);
+        infusingRod.setTextureName(ModVars.MOD_ID + ":" + infusingRod.getUnlocalizedName());
+        GameRegistry.registerItem(infusingRod, infusingRod.getUnlocalizedName());
+
+        blackBrick = new Item().setUnlocalizedName("blackBrick").setCreativeTab(CreativeTabs.tabMaterials);
+        blackBrick.setTextureName(ModVars.MOD_ID + ":" + blackBrick.getUnlocalizedName());
+        GameRegistry.registerItem(blackBrick, blackBrick.getUnlocalizedName());
 
         // Tools
 

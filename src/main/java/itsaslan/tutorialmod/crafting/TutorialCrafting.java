@@ -16,6 +16,7 @@ public class TutorialCrafting {
         GameRegistry.addSmelting(TutorialModBlocks.stellarOre, new ItemStack(TutorialModItems.stellarIngot), 10.0f);
         //GameRegistry.addSmelting(Items.iron_ingot, new ItemStack(TutorialModItems.stellarIngot), 10.0f);
         GameRegistry.addSmelting(TutorialModItems.steelMix, new ItemStack(TutorialModItems.steelIngot, 2), 10.0f);
+        GameRegistry.addSmelting(TutorialModItems.copperMix, new ItemStack(TutorialModItems.copperIngot, 2), 0.0f);
 
         GameRegistry.addRecipe(new ItemStack(TutorialModBlocks.blockOfStellarOre), new Object[]{"III", "III", "III", 'I', TutorialModItems.stellarIngot});
 
@@ -43,8 +44,13 @@ public class TutorialCrafting {
         GameRegistry.addRecipe(new ItemStack(TutorialModBlocks.waxChest), new Object[]{"IKI", "I I", "III", 'I', TutorialModItems.wax, 'K', Blocks.glass_pane});
 
         GameRegistry.addRecipe(new ItemStack(TutorialModBlocks.testCraftingTableBlock), new Object[]{"III", "OKO", "III", 'I', TutorialModItems.steelIngot, 'O', TutorialModItems.wax, 'K', Blocks.crafting_table});
+        GameRegistry.addRecipe(new ItemStack(TutorialModBlocks.kilnBlock), new Object[]{"III", "IKI", "III", 'I', Items.brick, 'K', Blocks.furnace});
 
         GameRegistry.addRecipe(new ItemStack(TutorialModItems.cloth, 8), new Object[]{"IK", "KI", 'I', Items.string, 'K', Blocks.wool});
+        GameRegistry.addRecipe(new ItemStack(TutorialModItems.infusingRod), new Object[]{"I", "K", "I", 'I', TutorialModItems.copperIngot, 'K', Items.redstone});
+
+        GameRegistry.addRecipe(new ItemStack(TutorialModBlocks.armorInfuser), new Object[]{"III", "JKJ", "LLL", 'I', TutorialModItems.blackBrick, 'J', TutorialModItems.infusingRod, 'K', TutorialModItems.wax, 'L', TutorialModItems.steelIngot});
+
     }
 
 }

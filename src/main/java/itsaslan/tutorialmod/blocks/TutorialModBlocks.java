@@ -18,11 +18,19 @@ public class TutorialModBlocks {
     public static Block testCraftingTableBlock;
     public static Block kilnBlock;
 
+    public static Block copperOre;
+    public static Block armorInfuser;
+
+    public static Block blackRock;
+
     public static void init()
     {
 
         stellarOre = new TutorialBlock(Material.rock, "stellarOre", 3.0f, 0.5f, 2, 500.0f, Block.soundTypeStone);
         GameRegistry.registerBlock(stellarOre, stellarOre.getUnlocalizedName());
+
+        copperOre = new TutorialBlock(Material.rock, "copperOre", 3.0f, 0.0f, 2, 200.0f, Block.soundTypeStone);
+        GameRegistry.registerBlock(copperOre, copperOre.getUnlocalizedName());
 
         waxCrop = new TutorialCrop().setBlockName("waxCrop").setBlockTextureName(ModVars.MOD_ID + ":waxCrop");
         GameRegistry.registerBlock(waxCrop, waxCrop.getUnlocalizedName());
@@ -35,6 +43,12 @@ public class TutorialModBlocks {
 
         kilnBlock = new KilnBlock(Material.rock).setBlockName("Kiln").setCreativeTab(CreativeTabs.tabDecorations);
         GameRegistry.registerBlock(kilnBlock, kilnBlock.getUnlocalizedName());
+
+        armorInfuser = new TutorialBlock(Material.rock, "armorInfuser", 3.0f, 0.5f, 2, 500.0f, Block.soundTypeStone);
+        GameRegistry.registerBlock(armorInfuser, armorInfuser.getUnlocalizedName());
+
+        blackRock = new TutorialBlock(Material.rock, "blackRock", 2.0f, 0.0f, 2, 20.0f, Block.soundTypeStone);
+        GameRegistry.registerBlock(blackRock, blackRock.getUnlocalizedName());
 
     }
 

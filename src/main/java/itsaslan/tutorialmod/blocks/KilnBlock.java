@@ -47,12 +47,14 @@ public class KilnBlock extends BlockContainer
                     }
                     else if(player.inventory.getCurrentItem().getItem() == Items.flint_and_steel)
                     {
+                        this.setLightLevel(1.0f);
                         ((KilnBlockTileEntity) hitTileEntity).setActiveTimer(100);
                         int newMeta = 1;
                         world.setBlockMetadataWithNotify(x, y, z, newMeta, 2);
                     }
                     else if(player.inventory.getCurrentItem().getItem() == Items.lava_bucket)
                     {
+                        this.setLightLevel(0.0f);
                         ((KilnBlockTileEntity) hitTileEntity).setActiveTimer(1000);
                         int newMeta = 1;
                         world.setBlockMetadataWithNotify(x, y, z, newMeta, 2);

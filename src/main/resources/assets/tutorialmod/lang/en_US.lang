@@ -25,12 +25,17 @@ item.stellarNugget.name=Stellar Nugget
 tile.waxChest.name=Wax Chest
 
 tile.waxFurnace.name=Wax Furnace
-
+tile.Kiln.name=Kiln Furnace
 tile.testGuiBlock.name=Red Chest
 tile.testCraftingTableBlock.name=Gem Workbench
 item.steelIngot.name=Steel Ingot
 item.steelMix.name=Steel Mix
 item.cloth.name=Cloth
 item.emeraldMix.name=Emerald Mix
-
-tile.Kiln.name=Kiln
+item.infusingRod.name=Infusing Rod
+item.copperMix.name=Copper Mix
+item.copperIngot.name=Copper Ingot
+tile.copperOre.name=Copper Ore
+tile.armorInfuser.name=Armor Infuser
+tile.blackRock.name=Black Rock
+item.blackBrick.name=Black Brick
