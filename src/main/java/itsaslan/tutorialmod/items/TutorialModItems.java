@@ -48,6 +48,11 @@ public class TutorialModItems {
 
     public static Item blackBrick;
 
+    public static ItemArmor infusedHelmet;
+    public static ItemArmor infusedChestplate;
+    public static ItemArmor infusedLeggings;
+    public static ItemArmor infusedBoots;
+
     public static void init()
     {
 
@@ -68,6 +73,24 @@ public class TutorialModItems {
         stellarBoots = new ArmorBase(ArmorMaterials.STELLARARMOR, 0, 3, "stellar");
         stellarBoots.setUnlocalizedName("stellarBoots").setCreativeTab(CreativeTabs.tabCombat).setTextureName("tutorialmod:stellarBoots");;
         GameRegistry.registerItem(stellarBoots, "stellarBoots");
+
+        //-------------------------
+
+        infusedHelmet = new ArmorBase(ArmorMaterials.INFUSEDARMOR, 0, 0, "infused");
+        infusedHelmet.setUnlocalizedName("infusedHelmet").setCreativeTab(CreativeTabs.tabCombat).setTextureName("tutorialmod:infusedHelmet");;
+        GameRegistry.registerItem(infusedHelmet, "infusedHelmet");
+
+        infusedChestplate = new ArmorBase(ArmorMaterials.INFUSEDARMOR, 0, 1, "infused");
+        infusedChestplate.setUnlocalizedName("infusedChestplate").setCreativeTab(CreativeTabs.tabCombat).setTextureName("tutorialmod:infusedChestplate");;
+        GameRegistry.registerItem(infusedChestplate, "infusedChestplate");
+
+        infusedLeggings = new ArmorBase(ArmorMaterials.INFUSEDARMOR, 0, 2, "infused");
+        infusedLeggings.setUnlocalizedName("infusedLeggings").setCreativeTab(CreativeTabs.tabCombat).setTextureName("tutorialmod:infusedLeggings");;
+        GameRegistry.registerItem(infusedLeggings, "infusedLeggings");
+
+        infusedBoots = new ArmorBase(ArmorMaterials.INFUSEDARMOR, 0, 3, "infused");
+        infusedBoots.setUnlocalizedName("infusedBoots").setCreativeTab(CreativeTabs.tabCombat).setTextureName("tutorialmod:infusedBoots");;
+        GameRegistry.registerItem(infusedBoots, "infusedBoots");
 
         // Items
 

@@ -39,3 +39,7 @@ tile.copperOre.name=Copper Ore
 tile.armorInfuser.name=Armor Infuser
 tile.blackRock.name=Black Rock
 item.blackBrick.name=Black Brick
+item.infusedHelmet.name=Infused Helmet
+item.infusedChestplate.name=Infused Chestplate
+item.infusedLeggings.name=Infused Leggings
+item.infusedBoots.name=Infused Boots
