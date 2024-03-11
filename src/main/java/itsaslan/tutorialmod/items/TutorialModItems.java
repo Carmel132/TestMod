@@ -53,6 +53,8 @@ public class TutorialModItems {
     public static ItemArmor infusedLeggings;
     public static ItemArmor infusedBoots;
 
+    public static Item pickle;
+
     public static void init()
     {
 
@@ -141,6 +143,10 @@ public class TutorialModItems {
         blackBrick = new Item().setUnlocalizedName("blackBrick").setCreativeTab(CreativeTabs.tabMaterials);
         blackBrick.setTextureName(ModVars.MOD_ID + ":" + blackBrick.getUnlocalizedName());
         GameRegistry.registerItem(blackBrick, blackBrick.getUnlocalizedName());
+
+        pickle = new ItemFood(6, 0.5f, false).setCreativeTab(CreativeTabs.tabFood).setUnlocalizedName("pickle");
+        pickle.setTextureName(ModVars.MOD_ID + ":" + pickle.getUnlocalizedName());
+        GameRegistry.registerItem(pickle, "pickle");
 
         // Tools
 

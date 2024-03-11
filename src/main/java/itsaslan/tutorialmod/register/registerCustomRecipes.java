@@ -23,7 +23,7 @@ public class registerCustomRecipes
         RecipeHandler.addRecipeKilnRecipe(new ItemStack(TutorialModItems.emeraldMix), new ItemStack(Items.emerald), new ItemStack(Items.blaze_powder));
         RecipeHandler.addRecipeKilnRecipe(new ItemStack(TutorialModItems.copperMix, 4), new ItemStack(TutorialModBlocks.copperOre), new ItemStack(Items.coal));
         RecipeHandler.addRecipeKilnRecipe(new ItemStack(TutorialModItems.blackBrick, 4), new ItemStack(TutorialModBlocks.blackRock), new ItemStack(Items.blaze_powder));
-
+        RecipeHandler.addRecipeKilnRecipe(new ItemStack(TutorialModItems.pickle), new ItemStack(Blocks.leaves), new ItemStack(Items.diamond));
 
     }
 

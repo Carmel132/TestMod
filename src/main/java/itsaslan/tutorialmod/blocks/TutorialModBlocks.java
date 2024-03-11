@@ -23,6 +23,8 @@ public class TutorialModBlocks {
 
     public static Block blackRock;
 
+    public static Block bombTest;
+
     public static void init()
     {
 
@@ -49,6 +51,9 @@ public class TutorialModBlocks {
 
         blackRock = new TutorialBlock(Material.rock, "blackRock", 2.0f, 0.0f, 2, 20.0f, Block.soundTypeStone);
         GameRegistry.registerBlock(blackRock, blackRock.getUnlocalizedName());
+
+        bombTest = new bombTest().setBlockName("bombTest").setCreativeTab(CreativeTabs.tabBlock);
+        GameRegistry.registerBlock(bombTest, bombTest.getUnlocalizedName());
 
     }
 
