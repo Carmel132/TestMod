@@ -21,12 +21,11 @@ public class bombTest extends BlockTNT
 
         if(player.inventory.getCurrentItem() != null)
         {
-            if(player.inventory.getCurrentItem().getItem() == Items.flint_and_steel)
+            if(player.inventory.getCurrentItem().getItem() == Items.flint_and_steel && !world.isRemote)
             {
-                bombTestTileEntity bomb = new bombTestTileEntity(world,10);
+                bombTestTileEntity bomb = new bombTestTileEntity(world,4.0f);
+                bomb.setPosition(x + 0.5, y + 1.0, z + 0.5);
                 world.spawnEntityInWorld(bomb);
-                bomb.explode();
-                System.out.println("Finished Loop");
             }
         }
 
