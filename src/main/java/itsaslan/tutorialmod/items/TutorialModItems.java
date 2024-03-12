@@ -55,6 +55,11 @@ public class TutorialModItems {
 
     public static Item pickle;
 
+    public static Item igniter;
+    public static Item fuselage;
+    public static Item bombCore;
+
+
     public static void init()
     {
 
@@ -179,6 +184,20 @@ public class TutorialModItems {
         wax = new ItemFood(6, 0.5f, false).setCreativeTab(CreativeTabs.tabMisc).setUnlocalizedName("wax");
         wax.setTextureName(ModVars.MOD_ID + ":" + wax.getUnlocalizedName());
         GameRegistry.registerItem(wax, "wax");
+
+        // Bomb Items
+
+        igniter = new Item().setUnlocalizedName("igniter").setCreativeTab(CreativeTabs.tabMisc);
+        igniter.setTextureName(ModVars.MOD_ID + ":" + igniter.getUnlocalizedName());
+        GameRegistry.registerItem(igniter, igniter.getUnlocalizedName());
+
+        fuselage = new Item().setUnlocalizedName("fuselage").setCreativeTab(CreativeTabs.tabMisc);
+        fuselage.setTextureName(ModVars.MOD_ID + ":" + fuselage.getUnlocalizedName());
+        GameRegistry.registerItem(fuselage, fuselage.getUnlocalizedName());
+
+        bombCore = new Item().setUnlocalizedName("bombCore").setCreativeTab(CreativeTabs.tabMisc);
+        bombCore.setTextureName(ModVars.MOD_ID + ":" + bombCore.getUnlocalizedName());
+        GameRegistry.registerItem(bombCore, bombCore.getUnlocalizedName());
 
     }
 

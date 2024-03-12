@@ -44,3 +44,7 @@ item.infusedChestplate.name=Infused Chestplate
 item.infusedLeggings.name=Infused Leggings
 item.infusedBoots.name=Infused Boots
 item.pickle.name=pickle
+
+item.igniter.name=Igniter
+item.fuselage.name=Fuselage
+item.bombCore.name=Bomb Core
