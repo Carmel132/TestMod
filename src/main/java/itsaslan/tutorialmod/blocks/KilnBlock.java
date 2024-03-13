@@ -12,6 +12,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
@@ -41,29 +42,31 @@ public class KilnBlock extends BlockContainer
             {
                 if(player.inventory.getCurrentItem() != null)
                 {
-                    if(player.inventory.getCurrentItem().getItem() != Items.flint_and_steel && player.inventory.getCurrentItem().getItem() != TutorialModItems.cloth && player.inventory.getCurrentItem().getItem() != Items.lava_bucket)
-                    {
-                        player.openGui(Main.instance, GuiHandler.KILN_GUI, world, x, y, z);
-                    }
-                    else if(player.inventory.getCurrentItem().getItem() == Items.flint_and_steel)
+                    Item currentItem = player.inventory.getCurrentItem().getItem();
+
+                    if(currentItem == Items.flint_and_steel)
                     {
                         this.setLightLevel(1.0f);
                         ((KilnBlockTileEntity) hitTileEntity).setActiveTimer(100);
                         int newMeta = 1;
                         world.setBlockMetadataWithNotify(x, y, z, newMeta, 2);
                     }
-                    else if(player.inventory.getCurrentItem().getItem() == Items.lava_bucket)
+                    else if(currentItem == Items.lava_bucket)
                     {
                         this.setLightLevel(0.0f);
                         ((KilnBlockTileEntity) hitTileEntity).setActiveTimer(1000);
                         int newMeta = 1;
                         world.setBlockMetadataWithNotify(x, y, z, newMeta, 2);
                     }
-                    else if(player.inventory.getCurrentItem().getItem() == TutorialModItems.cloth)
+                    else if(currentItem == TutorialModItems.cloth)
                     {
                         ((KilnBlockTileEntity) hitTileEntity).setActiveTimer(0);
                         int newMeta = 2;
                         world.setBlockMetadataWithNotify(x, y, z, newMeta, 2);
+                    }
+                    else
+                    {
+                        player.openGui(Main.instance, GuiHandler.KILN_GUI, world, x, y, z);
                     }
                 }
                 else

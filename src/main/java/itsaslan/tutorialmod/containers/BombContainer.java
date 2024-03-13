@@ -60,16 +60,8 @@ public class BombContainer extends Container
     public void onCraftMatrixChanged(IInventory inventory) {
         super.onCraftMatrixChanged(inventory);
 
-        if(checkCorrectRecipe())
-        {
-            System.out.println("Correct Orientation: " + requiredItems[0] + ", " + requiredItems[1] + ", " + requiredItems[2] + ", " + requiredItems[3]);
-            bombTestTileEntity.isReadyToBlow = true;
-        }
-        else if(!checkCorrectRecipe())
-        {
-            bombTestTileEntity.isReadyToBlow = false;
-        }
-
+        bombTestTileEntity.isReadyToBlow = checkCorrectRecipe();
+        if (bombTestTileEntity.isReadyToBlow) {System.out.println("Correct Orientation: " + requiredItems[0] + ", " + requiredItems[1] + ", " + requiredItems[2] + ", " + requiredItems[3]);}
     }
 
     public boolean checkCorrectRecipe()
@@ -83,7 +75,7 @@ public class BombContainer extends Container
                     return false;
                 }
             }
-            else if(craftingMatrix.getStackInSlot(i) == null)
+            else
             {
                 return false;
             }
