@@ -7,6 +7,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import itsaslan.tutorialmod.blocks.TutorialBlock;
 import itsaslan.tutorialmod.blocks.TutorialModBlocks;
+import itsaslan.tutorialmod.register.registerItemRenderers;
 import itsaslan.tutorialmod.register.registerSpecialRenderers;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.MinecraftForgeClient;
@@ -23,6 +24,7 @@ public class ClientProxy extends CommonProxy {
     {
         super.init($e);
         registerSpecialRenderers.init();
+        registerItemRenderers.init();
     }
 
     public void postInit(FMLPostInitializationEvent $e)

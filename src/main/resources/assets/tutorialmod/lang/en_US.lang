@@ -48,3 +48,4 @@ item.pickle.name=pickle
 item.igniter.name=Igniter
 item.fuselage.name=Fuselage
 item.bombCore.name=Bomb Core
+tile.bombTest.name=BOMB

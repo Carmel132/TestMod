@@ -73,10 +73,30 @@ public class bombTest extends BlockContainer
             if(isPowered && bombTileEntity.isReadyToBlow) {
                 System.out.println("Blew up");
                 world.setBlock(x, y, z, Blocks.air);
-                world.createExplosion(null, x, y, z, radius, true); // Ensure radius is a valid field in BombTestTileEntity
+
+                calculateExplosion(world, x, y, z, 50, 50, 50);
+                //world.createExplosion(null, x, y, z, radius, true); // Ensure radius is a valid field in BombTestTileEntity
             }
         }
 
+    }
+
+    private void calculateExplosion(World world, int x, int y, int z, int xPlane, int yPlane, int zHeight) // xPlane and yPlane are the dimensions of the 2d square which is then layered upon by the zHeight
+    {
+        for(int height = 0; height < zHeight; ++height)
+        {
+            for(int length = 0; length < yPlane; ++length)
+            {
+                for(int width = 0; width < xPlane; ++width)
+                {
+                    world.setBlock(x + width, y + (height - (height * 2)), z + length, Blocks.air);
+                    world.setBlock(x - width, y + (height - (height * 2)), z + length, Blocks.air);
+                    world.setBlock(x + width, y + (height - (height * 2)), z - length, Blocks.air);
+                    world.setBlock(x - width, y + (height - (height * 2)), z - length, Blocks.air);
+                    System.out.println("Set Block to air");
+                }
+            }
+        }
     }
 
     @Override
