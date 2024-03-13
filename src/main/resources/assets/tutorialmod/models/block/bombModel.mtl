@@ -1,0 +1,4 @@
+# Made in Blockbench 4.9.4
+newmtl bombModel
+map_Kd bombTexture.png
+newmtl none
