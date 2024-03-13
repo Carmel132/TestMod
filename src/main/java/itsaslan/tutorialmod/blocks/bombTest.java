@@ -23,7 +23,7 @@ public class bombTest extends BlockContainer
     private float radius;
     private BombTestTileEntity tileEntity;
 
-    public bombTest(Material material, float radius)
+    public bombTest(Material material, float radius=50)
     {
         super(material);
         this.radius = radius;
@@ -74,7 +74,7 @@ public class bombTest extends BlockContainer
                 System.out.println("Blew up");
                 world.setBlock(x, y, z, Blocks.air);
 
-                calculateExplosion(world, x, y, z, 50, 50, 50);
+                calculateExplosion(world, x, y, z, radius, radius, radius);
                 //world.createExplosion(null, x, y, z, radius, true); // Ensure radius is a valid field in BombTestTileEntity
             }
         }
