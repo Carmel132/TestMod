@@ -58,7 +58,7 @@ public class KilnContainer extends Container
     }
 
     private void updateCraftingResults() {
-        ItemStack result = RecipeHandler.findMatchingRecipeKiln(craftingMatrix);
+        ItemStack result = RecipeHandler.findMatchingRecipe(craftingMatrix);
 
         craftResult.setInventorySlotContents(0, result);
 

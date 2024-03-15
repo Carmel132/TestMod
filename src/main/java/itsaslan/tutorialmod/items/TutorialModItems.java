@@ -19,11 +19,11 @@ public class TutorialModItems {
     public static Item steelIngot;
     public static Item steelMix;
 
-    public static ItemSword stellarSword;
-    public static ItemPickaxe stellarPickaxe;
-    public static ItemAxe stellarAxe;
-    public static ItemHoe stellarHoe;
-    public static ItemSpade stellarShovel;
+    public static Item stellarSword;
+    public static Item stellarPickaxe;
+    public static Item stellarAxe;
+    public static Item stellarHoe;
+    public static Item stellarShovel;
 
     public static ItemArmor stellarHelmet;
     public static ItemArmor stellarChestplate;
@@ -154,23 +154,23 @@ public class TutorialModItems {
 
         // Tools
 
-        stellarSword = (ItemSword) new ItemSword(ToolMaterials.FUNNYMAT).setUnlocalizedName("stellarSword").setCreativeTab(CreativeTabs.tabCombat);
+        stellarSword = new ItemSword(ToolMaterials.FUNNYMAT).setUnlocalizedName("stellarSword").setCreativeTab(CreativeTabs.tabCombat);
         stellarSword.setTextureName(ModVars.MOD_ID + ":" + stellarSword.getUnlocalizedName());
         GameRegistry.registerItem(stellarSword, "stellarSword");
 
-        stellarPickaxe = (ItemPickaxe) new PickaxeBase(ToolMaterials.STELLARMATERIAL).setUnlocalizedName("stellarPickaxe").setCreativeTab(CreativeTabs.tabTools);
+        stellarPickaxe = new PickaxeBase(ToolMaterials.STELLARMATERIAL).setUnlocalizedName("stellarPickaxe").setCreativeTab(CreativeTabs.tabTools);
         stellarPickaxe.setTextureName(ModVars.MOD_ID + ":" + stellarPickaxe.getUnlocalizedName());
         GameRegistry.registerItem(stellarPickaxe, "stellarPickaxe");
 
-        stellarAxe = (ItemAxe) new AxeBase(ToolMaterials.STELLARMATERIAL).setUnlocalizedName("stellarAxe").setCreativeTab(CreativeTabs.tabTools);
+        stellarAxe = new AxeBase(ToolMaterials.STELLARMATERIAL).setUnlocalizedName("stellarAxe").setCreativeTab(CreativeTabs.tabTools);
         stellarAxe.setTextureName(ModVars.MOD_ID + ":" + stellarAxe.getUnlocalizedName());
         GameRegistry.registerItem(stellarAxe, "stellarAxe");
 
-        stellarHoe = (ItemHoe) new HoeBase(ToolMaterials.STELLARMATERIAL).setUnlocalizedName("stellarHoe").setCreativeTab(CreativeTabs.tabTools);
+        stellarHoe = new HoeBase(ToolMaterials.STELLARMATERIAL).setUnlocalizedName("stellarHoe").setCreativeTab(CreativeTabs.tabTools);
         stellarHoe.setTextureName(ModVars.MOD_ID + ":" + stellarHoe.getUnlocalizedName());
         GameRegistry.registerItem(stellarHoe, "stellarHoe");
 
-        stellarShovel = (ItemSpade) new ShovelBase(ToolMaterials.STELLARMATERIAL).setUnlocalizedName("stellarShovel").setCreativeTab(CreativeTabs.tabTools);
+        stellarShovel = new ShovelBase(ToolMaterials.STELLARMATERIAL).setUnlocalizedName("stellarShovel").setCreativeTab(CreativeTabs.tabTools);
         stellarShovel.setTextureName(ModVars.MOD_ID + ":" + stellarShovel.getUnlocalizedName());
         GameRegistry.registerItem(stellarShovel, "stellarShovel");
 

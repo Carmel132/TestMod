@@ -54,7 +54,7 @@ public class CraftingContainer extends Container
     }
 
     private void updateCraftingResults() {
-        ItemStack result = RecipeHandler.findMatchingRecipeBasic(craftingMatrix);
+        ItemStack result = RecipeHandler.findMatchingRecipe(craftingMatrix);
 
         craftResult.setInventorySlotContents(0, result);
 

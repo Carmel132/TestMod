@@ -1,12 +1,8 @@
 package itsaslan.tutorialmod.handlers;
 
-import itsaslan.tutorialmod.recipes.BasicRecipe;
-import itsaslan.tutorialmod.recipes.KilnRecipe;
-import net.minecraft.inventory.Container;
+import itsaslan.tutorialmod.interfaces.IRecipeHandler;
 import net.minecraft.inventory.InventoryCrafting;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,24 +10,19 @@ import java.util.List;
 
 public class RecipeHandler
 {
-    private final static List<BasicRecipe> basicRecipes = new ArrayList<BasicRecipe>();
-    private final static List<KilnRecipe> kilnRecipes = new ArrayList<KilnRecipe>();
 
-    public static void addRecipeBasicRecipe(ItemStack output, ItemStack... inputs)
+    private final static List<IRecipeHandler> recipes = new ArrayList<IRecipeHandler>();
+
+    public static <T extends IRecipeHandler> void addRecipe(T recipe)
     {
-        basicRecipes.add(new BasicRecipe(output, inputs));
+        recipes.add(recipe);
     }
 
-    public static void addRecipeKilnRecipe(ItemStack output, ItemStack... inputs)
+    public static ItemStack findMatchingRecipe(InventoryCrafting craftMatrix)
     {
-        kilnRecipes.add(new KilnRecipe(output, inputs));
-    }
-
-    public static ItemStack findMatchingRecipeBasic(InventoryCrafting craftMatrix)
-    {
-        for(BasicRecipe recipe : basicRecipes)
+        for (IRecipeHandler recipe : recipes)
         {
-            if(doesBasicRecipeMatch(recipe, craftMatrix))
+            if(doesRecipeMatch(recipe, craftMatrix))
             {
                 return recipe.getOutput().copy();
             }
@@ -39,27 +30,13 @@ public class RecipeHandler
         return null;
     }
 
-    public static ItemStack findMatchingRecipeKiln(InventoryCrafting craftMatrix)
+    private static boolean doesRecipeMatch(IRecipeHandler recipe, InventoryCrafting craftMatrix)
     {
-        for(KilnRecipe recipe : kilnRecipes)
-        {
-            if(doesKilnRecipeMatch(recipe, craftMatrix))
-            {
-                return recipe.getOutput().copy();
-            }
-        }
-        return null;
-    }
-
-    private static boolean doesBasicRecipeMatch(BasicRecipe recipe, InventoryCrafting craftMatrix)
-    {
-
         List<ItemStack> inputsNeeded = new ArrayList<ItemStack>(Arrays.asList(recipe.getInputs()));
 
         for(int i = 0; i < craftMatrix.getSizeInventory(); i++)
         {
             ItemStack slotStack = craftMatrix.getStackInSlot(i);
-
             if(slotStack != null)
             {
                 boolean matched = false;
@@ -73,49 +50,12 @@ public class RecipeHandler
                         break;
                     }
                 }
-
                 if(!matched)
                 {
                     return false;
                 }
-
             }
         }
-
-        return inputsNeeded.isEmpty();
-    }
-
-    private static boolean doesKilnRecipeMatch(KilnRecipe recipe, InventoryCrafting craftMatrix)
-    {
-
-        List<ItemStack> inputsNeeded = new ArrayList<ItemStack>(Arrays.asList(recipe.getInputs()));
-
-        for(int i = 0; i < craftMatrix.getSizeInventory(); i++)
-        {
-            ItemStack slotStack = craftMatrix.getStackInSlot(i);
-
-            if(slotStack != null)
-            {
-                boolean matched = false;
-
-                for(ItemStack input : inputsNeeded)
-                {
-                    if(slotStack.getItem() == input.getItem())
-                    {
-                        matched = true;
-                        inputsNeeded.remove(input);
-                        break;
-                    }
-                }
-
-                if(!matched)
-                {
-                    return false;
-                }
-
-            }
-        }
-
         return inputsNeeded.isEmpty();
     }
 }
