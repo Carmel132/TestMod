@@ -1,9 +1,6 @@
 package itsaslan.tutorialmod.register;
 
-import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
-import itsaslan.tutorialmod.Main;
-import itsaslan.tutorialmod.lib.ModVars;
 import itsaslan.tutorialmod.tileentity.BombTestTileEntity;
 import itsaslan.tutorialmod.tileentity.KilnBlockTileEntity;
 import itsaslan.tutorialmod.tileentity.TestCraftingTileEntity;

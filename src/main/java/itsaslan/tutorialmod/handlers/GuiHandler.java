@@ -9,13 +9,9 @@ import itsaslan.tutorialmod.gui.BombGui;
 import itsaslan.tutorialmod.gui.KilnGui;
 import itsaslan.tutorialmod.gui.TestCraftingGui;
 import itsaslan.tutorialmod.gui.TestGui;
-import itsaslan.tutorialmod.lib.ModVars;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
-
-import java.awt.*;
 
 public class GuiHandler implements IGuiHandler
 {

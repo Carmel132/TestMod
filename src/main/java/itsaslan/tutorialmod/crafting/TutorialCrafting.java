@@ -5,7 +5,6 @@ import itsaslan.tutorialmod.blocks.TutorialModBlocks;
 import itsaslan.tutorialmod.items.TutorialModItems;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 public class TutorialCrafting {

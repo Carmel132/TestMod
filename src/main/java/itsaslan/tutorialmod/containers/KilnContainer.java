@@ -1,6 +1,5 @@
 package itsaslan.tutorialmod.containers;
 
-import itsaslan.tutorialmod.blocks.KilnBlock;
 import itsaslan.tutorialmod.handlers.RecipeHandler;
 import itsaslan.tutorialmod.tileentity.KilnBlockTileEntity;
 import net.minecraft.entity.player.EntityPlayer;

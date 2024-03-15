@@ -1,7 +1,6 @@
 package itsaslan.tutorialmod.recipes;
 
 import itsaslan.tutorialmod.interfaces.IRecipeHandler;
-import net.minecraft.inventory.Container;
 import net.minecraft.item.ItemStack;
 
 public class BasicRecipe implements IRecipeHandler

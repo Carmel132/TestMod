@@ -1,14 +1,12 @@
 package itsaslan.tutorialmod.register;
 
 import itsaslan.tutorialmod.blocks.TutorialModBlocks;
-import itsaslan.tutorialmod.containers.CraftingContainer;
 import itsaslan.tutorialmod.handlers.RecipeHandler;
 import itsaslan.tutorialmod.items.TutorialModItems;
 import itsaslan.tutorialmod.recipes.BasicRecipe;
 import itsaslan.tutorialmod.recipes.KilnRecipe;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 public class registerCustomRecipes

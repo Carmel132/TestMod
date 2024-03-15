@@ -5,8 +5,6 @@ import net.minecraft.inventory.Slot;
 
 public class OneItemCraftingSlot extends Slot
 {
-
-
     public OneItemCraftingSlot(IInventory inventory, int index, int x, int y) {
         super(inventory, index, x, y);
     }

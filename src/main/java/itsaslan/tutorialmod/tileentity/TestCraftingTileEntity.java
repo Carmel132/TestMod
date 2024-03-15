@@ -1,7 +1,5 @@
 package itsaslan.tutorialmod.tileentity;
 
-import itsaslan.tutorialmod.Main;
-import itsaslan.tutorialmod.handlers.GuiHandler;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;

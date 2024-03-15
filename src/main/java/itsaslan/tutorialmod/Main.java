@@ -6,13 +6,9 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
-import cpw.mods.fml.common.registry.GameRegistry;
-import itsaslan.tutorialmod.generation.stellarGeneration;
 import itsaslan.tutorialmod.handlers.GuiHandler;
 import itsaslan.tutorialmod.lib.ModVars;
 import itsaslan.tutorialmod.proxy.CommonProxy;
-import itsaslan.tutorialmod.proxy.ServerProxy;
-import itsaslan.tutorialmod.register.registerGenerators;
 
 @Mod(modid = ModVars.MOD_ID, name = ModVars.MOD_Name, version = ModVars.MOD_Version)
 public class Main {

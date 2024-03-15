@@ -1,20 +1,12 @@
 package itsaslan.tutorialmod.blocks;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import itsaslan.tutorialmod.lib.ModVars;
 import itsaslan.tutorialmod.tileentity.BombTestTileEntity;
-import itsaslan.tutorialmod.tileentity.KilnBlockTileEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
-import net.minecraft.block.BlockTNT;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 
 public class bombTest extends BlockContainer

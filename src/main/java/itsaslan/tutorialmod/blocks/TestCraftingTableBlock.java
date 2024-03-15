@@ -6,8 +6,6 @@ import itsaslan.tutorialmod.Main;
 import itsaslan.tutorialmod.handlers.GuiHandler;
 import itsaslan.tutorialmod.lib.ModVars;
 import itsaslan.tutorialmod.tileentity.TestCraftingTileEntity;
-import itsaslan.tutorialmod.tileentity.TestTileEntity;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
