@@ -59,6 +59,8 @@ public class TutorialModItems {
     public static Item fuselage;
     public static Item bombCore;
 
+    public static Item specialGrassSeed;
+
 
     public static void init()
     {
@@ -184,6 +186,9 @@ public class TutorialModItems {
         wax = new ItemFood(6, 0.5f, false).setCreativeTab(CreativeTabs.tabMisc).setUnlocalizedName("wax");
         wax.setTextureName(ModVars.MOD_ID + ":" + wax.getUnlocalizedName());
         GameRegistry.registerItem(wax, "wax");
+
+        specialGrassSeed = new ItemSeeds(TutorialModBlocks.specialGrassBottom, Blocks.farmland).setCreativeTab(CreativeTabs.tabMisc).setUnlocalizedName("specialGrassSeed");
+        GameRegistry.registerItem(specialGrassSeed, specialGrassSeed.getUnlocalizedName());
 
         // Bomb Items
 
