@@ -30,7 +30,7 @@ public class TallCropBottom extends BlockCrops implements IGrowable
     @Override
     protected Item func_149865_P() {
 
-        return TutorialModItems.blackBrick;
+        return TutorialModItems.specialGrassItem;
 
     }
 

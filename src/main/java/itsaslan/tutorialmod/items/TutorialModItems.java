@@ -1,19 +1,15 @@
 package itsaslan.tutorialmod.items;
 
-import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.registry.GameRegistry;
-import itsaslan.tutorialmod.blocks.TutorialCrop;
 import itsaslan.tutorialmod.blocks.TutorialModBlocks;
 import itsaslan.tutorialmod.enums.ArmorMaterials;
 import itsaslan.tutorialmod.enums.ToolMaterials;
 import itsaslan.tutorialmod.items.base.*;
 import itsaslan.tutorialmod.lib.ModVars;
-import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.*;
 import net.minecraft.potion.Potion;
-import net.minecraft.potion.PotionEffect;
 
 public class TutorialModItems {
 
@@ -60,6 +56,7 @@ public class TutorialModItems {
     public static Item bombCore;
 
     public static Item specialGrassSeed;
+    public static Item specialGrassItem;
 
 
     public static void init()
@@ -68,7 +65,7 @@ public class TutorialModItems {
         //Armor
 
         stellarHelmet = new ArmorBase(ArmorMaterials.STELLARARMOR, 0, 0, "stellar");
-        stellarHelmet.setUnlocalizedName("stellarHelmet").setCreativeTab(CreativeTabs.tabCombat).setTextureName("tutorialmod:stellarHelmet");;
+        stellarHelmet.setUnlocalizedName("stellarHelmet").setCreativeTab(CreativeTabs.tabCombat).setTextureName("tutorialmod:stellarHelmet");
         GameRegistry.registerItem(stellarHelmet, "stellarHelmet");
 
         stellarChestplate = new ArmorBase(ArmorMaterials.STELLARARMOR, 0, 1, "stellar");
@@ -76,29 +73,29 @@ public class TutorialModItems {
         GameRegistry.registerItem(stellarChestplate, "stellarChestplate");
 
         stellarLeggings = new ArmorBase(ArmorMaterials.STELLARARMOR, 0, 2, "stellar");
-        stellarLeggings.setUnlocalizedName("stellarLeggings").setCreativeTab(CreativeTabs.tabCombat).setTextureName("tutorialmod:stellarLeggings");;
+        stellarLeggings.setUnlocalizedName("stellarLeggings").setCreativeTab(CreativeTabs.tabCombat).setTextureName("tutorialmod:stellarLeggings");
         GameRegistry.registerItem(stellarLeggings, "stellarLeggings");
 
         stellarBoots = new ArmorBase(ArmorMaterials.STELLARARMOR, 0, 3, "stellar");
-        stellarBoots.setUnlocalizedName("stellarBoots").setCreativeTab(CreativeTabs.tabCombat).setTextureName("tutorialmod:stellarBoots");;
+        stellarBoots.setUnlocalizedName("stellarBoots").setCreativeTab(CreativeTabs.tabCombat).setTextureName("tutorialmod:stellarBoots");
         GameRegistry.registerItem(stellarBoots, "stellarBoots");
 
         //-------------------------
 
         infusedHelmet = new ArmorBase(ArmorMaterials.INFUSEDARMOR, 0, 0, "infused");
-        infusedHelmet.setUnlocalizedName("infusedHelmet").setCreativeTab(CreativeTabs.tabCombat).setTextureName("tutorialmod:infusedHelmet");;
+        infusedHelmet.setUnlocalizedName("infusedHelmet").setCreativeTab(CreativeTabs.tabCombat).setTextureName("tutorialmod:infusedHelmet");
         GameRegistry.registerItem(infusedHelmet, "infusedHelmet");
 
         infusedChestplate = new ArmorBase(ArmorMaterials.INFUSEDARMOR, 0, 1, "infused");
-        infusedChestplate.setUnlocalizedName("infusedChestplate").setCreativeTab(CreativeTabs.tabCombat).setTextureName("tutorialmod:infusedChestplate");;
+        infusedChestplate.setUnlocalizedName("infusedChestplate").setCreativeTab(CreativeTabs.tabCombat).setTextureName("tutorialmod:infusedChestplate");
         GameRegistry.registerItem(infusedChestplate, "infusedChestplate");
 
         infusedLeggings = new ArmorBase(ArmorMaterials.INFUSEDARMOR, 0, 2, "infused");
-        infusedLeggings.setUnlocalizedName("infusedLeggings").setCreativeTab(CreativeTabs.tabCombat).setTextureName("tutorialmod:infusedLeggings");;
+        infusedLeggings.setUnlocalizedName("infusedLeggings").setCreativeTab(CreativeTabs.tabCombat).setTextureName("tutorialmod:infusedLeggings");
         GameRegistry.registerItem(infusedLeggings, "infusedLeggings");
 
         infusedBoots = new ArmorBase(ArmorMaterials.INFUSEDARMOR, 0, 3, "infused");
-        infusedBoots.setUnlocalizedName("infusedBoots").setCreativeTab(CreativeTabs.tabCombat).setTextureName("tutorialmod:infusedBoots");;
+        infusedBoots.setUnlocalizedName("infusedBoots").setCreativeTab(CreativeTabs.tabCombat).setTextureName("tutorialmod:infusedBoots");
         GameRegistry.registerItem(infusedBoots, "infusedBoots");
 
         // Items
@@ -188,7 +185,12 @@ public class TutorialModItems {
         GameRegistry.registerItem(wax, "wax");
 
         specialGrassSeed = new ItemSeeds(TutorialModBlocks.specialGrassBottom, Blocks.farmland).setCreativeTab(CreativeTabs.tabMisc).setUnlocalizedName("specialGrassSeed");
+        specialGrassSeed.setTextureName(ModVars.MOD_ID + ":" + specialGrassSeed.getUnlocalizedName());
         GameRegistry.registerItem(specialGrassSeed, specialGrassSeed.getUnlocalizedName());
+
+        specialGrassItem = new PotionEffectEdible(6, 1.0f, false, new Potion[]{Potion.moveSlowdown, Potion.damageBoost}, new int[]{600, 600}, new int[]{0, 1}).setCreativeTab(CreativeTabs.tabFood).setUnlocalizedName("specialGrassItem");
+        specialGrassItem.setTextureName(ModVars.MOD_ID + ":" + specialGrassItem.getUnlocalizedName());
+        GameRegistry.registerItem(specialGrassItem, specialGrassItem.getUnlocalizedName());
 
         // Bomb Items
 

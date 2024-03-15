@@ -58,10 +58,10 @@ public class TutorialModBlocks {
         bombTest = new bombTest(Material.tnt, 50).setBlockName("bombTest").setCreativeTab(CreativeTabs.tabBlock);
         GameRegistry.registerBlock(bombTest, bombTest.getUnlocalizedName());
 
-        specialGrassBottom = new TallCropBottom().setBlockName("specialGrassBottom").setCreativeTab(CreativeTabs.tabAllSearch).setBlockTextureName(ModVars.MOD_ID + ":specialGrass");;
+        specialGrassBottom = new TallCropBottom().setBlockName("specialGrassBottom").setBlockTextureName(ModVars.MOD_ID + ":specialGrass");;
         GameRegistry.registerBlock(specialGrassBottom, specialGrassBottom.getUnlocalizedName());
 
-        specialGrassTop = new TallCropTop().setCreativeTab(CreativeTabs.tabAllSearch);
+        specialGrassTop = new TallCropTop().setCreativeTab(CreativeTabs.tabAllSearch).setBlockTextureName(ModVars.MOD_ID + ":specialGrassTop");
         GameRegistry.registerBlock(specialGrassTop, specialGrassTop.getUnlocalizedName());
 
     }

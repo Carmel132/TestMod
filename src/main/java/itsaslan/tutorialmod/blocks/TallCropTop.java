@@ -11,8 +11,7 @@ public class TallCropTop extends Block
     public TallCropTop() {
         super(Material.plants);
         setBlockName("tallCropTop");
-        //setBlockTextureName("yourmodid:cropTop");
-        setBlockBounds(0F, 0F, 0F, 1F, 1F, 1F);
+        setBlockBounds(0F, 0F, 0F, 0F, 0F, 0F);
         setTickRandomly(false);
     }
 
@@ -26,4 +25,17 @@ public class TallCropTop extends Block
     public int getRenderType() {
         return 1; // Cross render type
     }
+
+    @Override
+    public boolean renderAsNormalBlock()
+    {
+        return false;
+    }
+
+    @Override
+    public boolean isOpaqueCube()
+    {
+        return false; // This makes sure that the block doesn't block rendering of adjacent blocks.
+    }
+
 }
