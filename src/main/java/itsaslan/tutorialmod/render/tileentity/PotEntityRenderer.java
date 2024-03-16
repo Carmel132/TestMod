@@ -29,18 +29,24 @@ public class PotEntityRenderer extends TileEntitySpecialRenderer
         model.renderAll();
         GL11.glPopMatrix();
 
-        if (tileEntity instanceof blockPotTileEntity) {
-            blockPotTileEntity potTe = (blockPotTileEntity) tileEntity;
 
-            if (potTe.getStoredItem() != null) {
-                GL11.glPushMatrix();
-                GL11.glTranslated(x + 0.5, y + 1, z + 0.5); // Adjust the position to where you want to render the item
-                EntityItem entityItem = new EntityItem(tileEntity.getWorldObj(), 0, 0, 0, potTe.getStoredItem());
-                entityItem.hoverStart = 0;
-                RenderItem.renderInFrame = true;
-                RenderManager.instance.renderEntityWithPosYaw(entityItem, 0D, 0D, 0D, 0F, 0F);
-                RenderItem.renderInFrame = false;
-                GL11.glPopMatrix();
+        if (tileEntity instanceof blockPotTileEntity)
+        {
+            blockPotTileEntity potTileEntity = (blockPotTileEntity) tileEntity;
+
+            for(int item = 0; item < potTileEntity.getStoredItems().length; ++item)
+            {
+                if(potTileEntity.getStoredItemAtIndex(item) != null)
+                {
+                    GL11.glPushMatrix();
+                    GL11.glTranslated(x + item, y, z); // Adjust the position to where you want to render the item
+                    EntityItem entityItem = new EntityItem(tileEntity.getWorldObj(), 0, 0, 0, potTileEntity.getStoredItemAtIndex(item));
+                    entityItem.hoverStart = 0;
+                    RenderItem.renderInFrame = true;
+                    RenderManager.instance.renderEntityWithPosYaw(entityItem, 0D, 0D, 0D, 0F, 0F);
+                    RenderItem.renderInFrame = false;
+                    GL11.glPopMatrix();
+                }
             }
         }
     }

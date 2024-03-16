@@ -1,5 +1,6 @@
 package itsaslan.tutorialmod.blocks;
 
+import itsaslan.tutorialmod.handlers.ComplexRecipeHandler;
 import itsaslan.tutorialmod.tileentity.blockPotTileEntity;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -15,7 +16,7 @@ import static org.apache.commons.lang3.ArrayUtils.contains;
 public class blockPot extends BlockContainer
 {
 
-    Item[] allowedItems = new Item[]{Items.iron_ingot, Items.gold_ingot};
+    Item[] allowedItems = new Item[]{Items.iron_ingot, Items.gold_ingot, Items.coal};
 
     protected blockPot(Material material) {
         super(material);
@@ -32,35 +33,39 @@ public class blockPot extends BlockContainer
 
                 blockPotTileEntity tileEntity = (blockPotTileEntity) world.getTileEntity(x, y, z);
 
-                if(tileEntity.getStoredItem() == null)
+                for(int i = 0; i < tileEntity.getLength(); ++i)
                 {
-                    tileEntity.setStoredItem(player.getHeldItem().copy());
-                    tileEntity.getStoredItem().stackSize = 1;
-                    if(!player.capabilities.isCreativeMode)
-                    {
-                        player.getHeldItem().stackSize--;
-                    }
-                    return true;
-                }
-                else
-                {
-                    ItemStack previousItem = tileEntity.getStoredItem();
-                    player.inventory.addItemStackToInventory(previousItem);
-                    tileEntity.setStoredItem(player.getHeldItem().copy());
-                    tileEntity.getStoredItem().stackSize = 1;
-                    if(!player.capabilities.isCreativeMode)
-                    {
-                        player.getHeldItem().stackSize--;
-                    }
 
-                    return true;
+                    if(tileEntity.getStoredItemAtIndex(i) == null)
+                    {
+                        tileEntity.setStoredItem(player.getHeldItem().copy(), i);
+                        tileEntity.getStoredItemAtIndex(i).stackSize = 1;
+                        if(!player.capabilities.isCreativeMode)
+                        {
+                            player.getHeldItem().stackSize--;
+                        }
+
+                        matchedOuput(tileEntity.getStoredItems());
+
+                        break;
+
+                    }
                 }
 
             }
         }
-
         return true;
     }
+
+    public static void matchedOuput(ItemStack[] currentItems)
+    {
+        ItemStack result = ComplexRecipeHandler.findMatchingRecipe(currentItems);
+        if(result != null)
+        {
+            System.out.println("correct Recipe");
+        }
+    }
+
 
     @Override
     public TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_) {

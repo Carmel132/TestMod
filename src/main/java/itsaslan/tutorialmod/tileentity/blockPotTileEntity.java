@@ -1,5 +1,6 @@
 package itsaslan.tutorialmod.tileentity;
 
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;
@@ -10,24 +11,34 @@ import net.minecraft.tileentity.TileEntity;
 public class blockPotTileEntity extends TileEntity
 {
 
-    private ItemStack storedItem = null;
+    private ItemStack[] storedItems = new ItemStack[3];
 
     @Override
     public void writeToNBT(NBTTagCompound compound) {
         super.writeToNBT(compound);
-        if (storedItem != null) {
-            NBTTagCompound itemTag = new NBTTagCompound();
-            storedItem.writeToNBT(itemTag);
-            compound.setTag("storedItem", itemTag);
+
+        for(int item = 0; item < storedItems.length; ++item)
+        {
+            if(storedItems[item] != null)
+            {
+                NBTTagCompound itemTag = new NBTTagCompound();
+                storedItems[item].writeToNBT(itemTag);
+                compound.setTag("storedItem_" + item, itemTag);
+            }
         }
     }
 
     @Override
     public void readFromNBT(NBTTagCompound compound) {
         super.readFromNBT(compound);
-        if (compound.hasKey("storedItem")) {
-            NBTTagCompound itemTag = compound.getCompoundTag("storedItem");
-            storedItem = ItemStack.loadItemStackFromNBT(itemTag);
+
+        for(int item = 0; item < storedItems.length; ++item)
+        {
+            if(compound.hasKey("storedItem_" + item))
+            {
+                NBTTagCompound itemTag = compound.getCompoundTag("storedItem_" + item);
+                storedItems[item] = ItemStack.loadItemStackFromNBT(itemTag);
+            }
         }
     }
 
@@ -43,17 +54,27 @@ public class blockPotTileEntity extends TileEntity
         readFromNBT(pkt.func_148857_g());
     }
 
-    public void setStoredItem(ItemStack storedItem)
+    public void setStoredItem(ItemStack storedItem, int index)
     {
-        this.storedItem = storedItem;
+        this.storedItems[index] = storedItem;
         markDirty();
         if (!worldObj.isRemote) {
             worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
         }
     }
 
-    public ItemStack getStoredItem()
+    public ItemStack[] getStoredItems()
     {
-        return storedItem;
+        return storedItems;
+    }
+
+    public ItemStack getStoredItemAtIndex(int index)
+    {
+        return storedItems[index];
+    }
+
+    public int getLength()
+    {
+        return storedItems.length;
     }
 }

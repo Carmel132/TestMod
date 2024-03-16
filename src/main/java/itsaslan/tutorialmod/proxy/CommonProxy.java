@@ -6,6 +6,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import itsaslan.tutorialmod.blocks.TutorialModBlocks;
 import itsaslan.tutorialmod.crafting.TutorialCrafting;
 import itsaslan.tutorialmod.items.TutorialModItems;
+import itsaslan.tutorialmod.register.registerCustomComplexRecipes;
 import itsaslan.tutorialmod.register.registerGenerators;
 import itsaslan.tutorialmod.register.registerCustomRecipes;
 import itsaslan.tutorialmod.register.registerTileEntities;
@@ -24,6 +25,7 @@ public class CommonProxy {
         registerTileEntities.init();
         TutorialCrafting.init();
         registerCustomRecipes.init();
+        registerCustomComplexRecipes.init();
     }
 
     public void postInit(FMLPostInitializationEvent $e)
