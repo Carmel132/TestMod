@@ -4,7 +4,6 @@ import itsaslan.tutorialmod.handlers.ComplexRecipeHandler;
 import itsaslan.tutorialmod.items.TutorialModItems;
 import itsaslan.tutorialmod.recipes.complexRecipes.PotRecipe;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 public class registerCustomComplexRecipes

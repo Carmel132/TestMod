@@ -12,10 +12,13 @@ public class blockPotTileEntity extends TileEntity
 {
 
     private ItemStack[] storedItems = new ItemStack[3];
+    private boolean waterFilled = false;
 
     @Override
     public void writeToNBT(NBTTagCompound compound) {
         super.writeToNBT(compound);
+
+        compound.setBoolean("waterFilled", waterFilled);
 
         for(int item = 0; item < storedItems.length; ++item)
         {
@@ -31,6 +34,8 @@ public class blockPotTileEntity extends TileEntity
     @Override
     public void readFromNBT(NBTTagCompound compound) {
         super.readFromNBT(compound);
+
+        waterFilled = compound.getBoolean("waterFilled");
 
         for(int item = 0; item < storedItems.length; ++item)
         {
@@ -76,5 +81,16 @@ public class blockPotTileEntity extends TileEntity
     public int getLength()
     {
         return storedItems.length;
+    }
+
+    public boolean getFilledWaterBool()
+    {
+        return waterFilled;
+    }
+
+    public void setFilledWaterBool(boolean bool)
+    {
+        this.waterFilled = bool;
+        worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
     }
 }

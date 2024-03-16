@@ -1,8 +1,10 @@
 package itsaslan.tutorialmod.render.tileentity;
 
+import cpw.mods.fml.common.Mod;
 import itsaslan.tutorialmod.lib.ModVars;
 import itsaslan.tutorialmod.tileentity.blockPotTileEntity;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.entity.RenderItem;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
@@ -39,7 +41,9 @@ public class PotEntityRenderer extends TileEntitySpecialRenderer
                 if(potTileEntity.getStoredItemAtIndex(item) != null)
                 {
                     GL11.glPushMatrix();
-                    GL11.glTranslated(x + item, y, z); // Adjust the position to where you want to render the item
+                    GL11.glTranslated(x + 0.3 + (0.2 * item), y, z + 0.5); // Adjust the position to where you want to render the item
+                    GL11.glRotatef(45.0f, 1.0f, 0.0f, 0.0f);
+                    GL11.glRotatef(90.0f, 0.0f, 1.0f, 0.0f);
                     EntityItem entityItem = new EntityItem(tileEntity.getWorldObj(), 0, 0, 0, potTileEntity.getStoredItemAtIndex(item));
                     entityItem.hoverStart = 0;
                     RenderItem.renderInFrame = true;
@@ -48,6 +52,32 @@ public class PotEntityRenderer extends TileEntitySpecialRenderer
                     GL11.glPopMatrix();
                 }
             }
+
+            if (potTileEntity.getFilledWaterBool()) {
+                GL11.glPushMatrix();
+                GL11.glTranslated(x + 0.5, y - 0.5, z + 0.5);
+
+                Minecraft.getMinecraft().getTextureManager().bindTexture(new ResourceLocation(ModVars.MOD_ID, "textures/blocks/potWater.png"));
+                GL11.glEnable(GL11.GL_BLEND);
+                GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
+                Tessellator tessellator = Tessellator.instance;
+
+
+                float waterHeight = 0.8f;
+                float size = 0.3f;
+
+                tessellator.startDrawingQuads();
+
+                tessellator.addVertexWithUV(-size, waterHeight, -size, 0, 0);
+                tessellator.addVertexWithUV(-size, waterHeight, size, 0, 1);
+                tessellator.addVertexWithUV(size, waterHeight, size, 1, 1);
+                tessellator.addVertexWithUV(size, waterHeight, -size, 1, 0);
+                tessellator.draw();
+
+                GL11.glDisable(GL11.GL_BLEND);
+                GL11.glPopMatrix();
+            }
         }
+
     }
 }

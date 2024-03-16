@@ -28,10 +28,11 @@ public class blockPot extends BlockContainer
 
         if(!world.isRemote && world.getTileEntity(x, y, z) instanceof blockPotTileEntity)
         {
+
+            blockPotTileEntity tileEntity = (blockPotTileEntity) world.getTileEntity(x, y, z);
+
             if(player.getHeldItem() != null && contains(allowedItems, player.getHeldItem().getItem()))
             {
-
-                blockPotTileEntity tileEntity = (blockPotTileEntity) world.getTileEntity(x, y, z);
 
                 for(int i = 0; i < tileEntity.getLength(); ++i)
                 {
@@ -53,6 +54,20 @@ public class blockPot extends BlockContainer
                 }
 
             }
+            else if (player.getHeldItem() != null && player.getHeldItem().getItem() == Items.water_bucket)
+            {
+                if(!tileEntity.getFilledWaterBool())
+                {
+                    tileEntity.setFilledWaterBool(true);
+                }
+            }
+            else if (player.getHeldItem() != null && player.getHeldItem().getItem() == Items.bucket)
+            {
+                if(tileEntity.getFilledWaterBool())
+                {
+                    tileEntity.setFilledWaterBool(false);
+                }
+            }
         }
         return true;
     }
@@ -65,7 +80,6 @@ public class blockPot extends BlockContainer
             System.out.println("correct Recipe");
         }
     }
-
 
     @Override
     public TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_) {
