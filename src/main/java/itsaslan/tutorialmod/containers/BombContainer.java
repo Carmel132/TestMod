@@ -20,7 +20,7 @@ public class BombContainer extends Container
     private static final int CRAFTING_INPUT_COLUMNS = 4;
     private static final int CRAFTING_INPUT_ROWS = 1;
 
-    private Item[] requiredItems = new Item[]{TutorialModItems.igniter, TutorialModItems.fuselage, TutorialModItems.bombCore, Items.egg};
+    private Item[] requiredItems = new Item[]{TutorialModItems.igniter, TutorialModItems.fuselage, TutorialModItems.bombCore, TutorialModItems.emeraldInfusedEgg};
 
     public BombContainer(InventoryPlayer playerInventory, TileEntity tileEntity)
     {

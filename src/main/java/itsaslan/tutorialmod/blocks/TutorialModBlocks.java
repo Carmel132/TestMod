@@ -28,6 +28,8 @@ public class TutorialModBlocks {
     public static Block specialGrassTop;
     public static Block specialGrassBottom;
 
+    public static Block blockPot;
+
     public static void init()
     {
 
@@ -63,6 +65,9 @@ public class TutorialModBlocks {
 
         specialGrassTop = new TallCropTop().setCreativeTab(CreativeTabs.tabAllSearch).setBlockTextureName(ModVars.MOD_ID + ":specialGrassTop");
         GameRegistry.registerBlock(specialGrassTop, specialGrassTop.getUnlocalizedName());
+
+        blockPot = new blockPot(Material.anvil).setCreativeTab(CreativeTabs.tabBlock).setBlockName("blockPot");
+        GameRegistry.registerBlock(blockPot, blockPot.getUnlocalizedName());
 
     }
 

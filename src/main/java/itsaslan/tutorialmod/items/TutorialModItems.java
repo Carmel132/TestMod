@@ -57,6 +57,9 @@ public class TutorialModItems {
 
     public static Item specialGrassSeed;
     public static Item specialGrassItem;
+    public static Item cubeOfSpecialGrass;
+
+    public static Item emeraldInfusedEgg;
 
 
     public static void init()
@@ -152,6 +155,14 @@ public class TutorialModItems {
         pickle.setTextureName(ModVars.MOD_ID + ":" + pickle.getUnlocalizedName());
         GameRegistry.registerItem(pickle, "pickle");
 
+        emeraldInfusedEgg = new Item().setCreativeTab(CreativeTabs.tabMisc).setUnlocalizedName("emeraldInfusedEgg");
+        emeraldInfusedEgg.setTextureName(ModVars.MOD_ID + ":" + emeraldInfusedEgg.getUnlocalizedName());
+        GameRegistry.registerItem(emeraldInfusedEgg, emeraldInfusedEgg.getUnlocalizedName());
+
+        cubeOfSpecialGrass = new Item().setCreativeTab(CreativeTabs.tabFood).setUnlocalizedName("cubeOfSpecialGrass");
+        cubeOfSpecialGrass.setTextureName(ModVars.MOD_ID + ":" + cubeOfSpecialGrass.getUnlocalizedName());
+        GameRegistry.registerItem(cubeOfSpecialGrass, cubeOfSpecialGrass.getUnlocalizedName());
+
         // Tools
 
         stellarSword = new ItemSword(ToolMaterials.FUNNYMAT).setUnlocalizedName("stellarSword").setCreativeTab(CreativeTabs.tabCombat);
@@ -188,7 +199,7 @@ public class TutorialModItems {
         specialGrassSeed.setTextureName(ModVars.MOD_ID + ":" + specialGrassSeed.getUnlocalizedName());
         GameRegistry.registerItem(specialGrassSeed, specialGrassSeed.getUnlocalizedName());
 
-        specialGrassItem = new PotionEffectEdible(6, 1.0f, false, new Potion[]{Potion.moveSlowdown, Potion.damageBoost}, new int[]{600, 600}, new int[]{0, 1}).setCreativeTab(CreativeTabs.tabFood).setUnlocalizedName("specialGrassItem");
+        specialGrassItem = new PotionEffectEdible(6, 1.0f, false, new Potion[]{Potion.moveSlowdown, Potion.damageBoost, Potion.hunger}, new int[]{600, 600, 600}, new int[]{0, 1, 2}).setCreativeTab(CreativeTabs.tabFood).setUnlocalizedName("specialGrassItem");
         specialGrassItem.setTextureName(ModVars.MOD_ID + ":" + specialGrassItem.getUnlocalizedName());
         GameRegistry.registerItem(specialGrassItem, specialGrassItem.getUnlocalizedName());
 

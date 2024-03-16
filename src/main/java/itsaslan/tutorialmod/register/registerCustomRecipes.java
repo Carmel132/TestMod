@@ -17,6 +17,7 @@ public class registerCustomRecipes
     {
 
         RecipeHandler.addRecipe(new BasicRecipe(new ItemStack(TutorialModItems.stellarGem), new ItemStack(TutorialModItems.wax), new ItemStack(TutorialModItems.sandPaper), new ItemStack(TutorialModItems.stellarIngot)));
+        RecipeHandler.addRecipe(new BasicRecipe(new ItemStack(TutorialModItems.emeraldInfusedEgg), new ItemStack(TutorialModItems.wax), new ItemStack(TutorialModItems.sandPaper), new ItemStack(TutorialModItems.emeraldMix)));
 
         RecipeHandler.addRecipe(new KilnRecipe(new ItemStack(TutorialModItems.steelMix, 4), new ItemStack(Items.iron_ingot), new ItemStack(Items.coal)));
         RecipeHandler.addRecipe(new KilnRecipe(new ItemStack(Items.brick, 4), new ItemStack(Items.clay_ball), new ItemStack(Items.coal)));

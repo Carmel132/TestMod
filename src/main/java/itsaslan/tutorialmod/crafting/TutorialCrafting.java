@@ -50,6 +50,8 @@ public class TutorialCrafting {
 
         GameRegistry.addRecipe(new ItemStack(TutorialModBlocks.armorInfuser), new Object[]{"III", "JKJ", "LLL", 'I', TutorialModItems.blackBrick, 'J', TutorialModItems.infusingRod, 'K', TutorialModItems.wax, 'L', TutorialModItems.steelIngot});
 
+        GameRegistry.addRecipe(new ItemStack(TutorialModItems.cubeOfSpecialGrass), new Object[]{"III", "IJI", "III", 'I', TutorialModItems.specialGrassItem, 'J', TutorialModItems.wax});
+        GameRegistry.addShapelessRecipe(new ItemStack(TutorialModItems.specialGrassItem, 8), new Object[]{TutorialModItems.cubeOfSpecialGrass});
     }
 
 }
