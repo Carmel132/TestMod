@@ -1,10 +1,7 @@
 package itsaslan.tutorialmod.register;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import itsaslan.tutorialmod.tileentity.BombTestTileEntity;
-import itsaslan.tutorialmod.tileentity.KilnBlockTileEntity;
-import itsaslan.tutorialmod.tileentity.TestCraftingTileEntity;
-import itsaslan.tutorialmod.tileentity.TestTileEntity;
+import itsaslan.tutorialmod.tileentity.*;
 
 public class registerTileEntities
 {
@@ -14,6 +11,7 @@ public class registerTileEntities
         GameRegistry.registerTileEntity(TestCraftingTileEntity.class, "gemWorkbench");
         GameRegistry.registerTileEntity(KilnBlockTileEntity.class, "kilnTileEntity");
         GameRegistry.registerTileEntity(BombTestTileEntity.class, "bombTileEntity");
+        GameRegistry.registerTileEntity(blockPotTileEntity.class, "blockPotTileEntity");
     }
 }
 
