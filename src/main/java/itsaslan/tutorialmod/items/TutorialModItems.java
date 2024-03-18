@@ -61,6 +61,9 @@ public class TutorialModItems {
 
     public static Item emeraldInfusedEgg;
 
+    public static Item lithiumCube;
+    public static Item uraniumIngot;
+
 
     public static void init()
     {
@@ -162,6 +165,14 @@ public class TutorialModItems {
         cubeOfSpecialGrass = new Item().setCreativeTab(CreativeTabs.tabFood).setUnlocalizedName("cubeOfSpecialGrass");
         cubeOfSpecialGrass.setTextureName(ModVars.MOD_ID + ":" + cubeOfSpecialGrass.getUnlocalizedName());
         GameRegistry.registerItem(cubeOfSpecialGrass, cubeOfSpecialGrass.getUnlocalizedName());
+
+        lithiumCube = new PotionEffectEdible(2, 0.2f, true, new Potion[]{Potion.poison, Potion.wither, Potion.hunger, Potion.moveSpeed}, new int[]{600, 600, 600, 600}, new int[]{1, 1, 1, 2}).setCreativeTab(CreativeTabs.tabMaterials).setUnlocalizedName("lithiumCube");
+        lithiumCube.setTextureName(ModVars.MOD_ID + ":" + lithiumCube.getUnlocalizedName());
+        GameRegistry.registerItem(lithiumCube, lithiumCube.getUnlocalizedName());
+
+        uraniumIngot = new PotionEffectEdible(200, 2000.f, true, new Potion[]{Potion.damageBoost}, new int[]{10000}, new int[]{3}).setCreativeTab(CreativeTabs.tabMaterials).setUnlocalizedName("uraniumIngot");
+        uraniumIngot.setTextureName(ModVars.MOD_ID + ":" + uraniumIngot.getUnlocalizedName());
+        GameRegistry.registerItem(uraniumIngot, uraniumIngot.getUnlocalizedName());
 
         // Tools
 

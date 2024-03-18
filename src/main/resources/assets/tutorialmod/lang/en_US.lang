@@ -57,3 +57,8 @@ item.cubeOfSpecialGrass.name=Cube of Special Grass
 item.emeraldInfusedEgg.name=Emerald Infused Egg
 
 tile.blockPot.name=Pot
+
+item.lithiumCube.name=Cube of Lithium
+item.uraniumIngot.name=Uranium Ingot
+
+tile.uraniumOre.name=Uranium Ore

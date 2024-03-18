@@ -1,10 +1,13 @@
 package itsaslan.tutorialmod.blocks;
 
 import itsaslan.tutorialmod.handlers.ComplexRecipeHandler;
+import itsaslan.tutorialmod.tileentity.KilnBlockTileEntity;
 import itsaslan.tutorialmod.tileentity.blockPotTileEntity;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -17,6 +20,7 @@ public class blockPot extends BlockContainer
 {
 
     Item[] allowedItems = new Item[]{Items.iron_ingot, Items.gold_ingot, Items.coal};
+    Block[] allowedHeaters = new Block[]{Blocks.fire, TutorialModBlocks.kilnBlock};
 
     protected blockPot(Material material) {
         super(material);
@@ -70,6 +74,42 @@ public class blockPot extends BlockContainer
             }
         }
         return true;
+    }
+
+    @Override
+    public void onNeighborBlockChange(World world, int x, int y, int z, Block block) {
+        super.onNeighborBlockChange(world, x, y, z, block);
+
+        if(world.getTileEntity(x, y, z) instanceof blockPotTileEntity)
+        {
+            blockPotTileEntity tileEntity = (blockPotTileEntity) world.getTileEntity(x, y, z);
+
+            if(contains(allowedHeaters, world.getBlock(x, y - 1, z)))
+            {
+                if(world.getBlock(x, y - 1, z) == TutorialModBlocks.kilnBlock)
+                {
+                    if(((KilnBlockTileEntity) world.getTileEntity(x, y - 1, z)).getActiveTimer() > 0)
+                    {
+                        tileEntity.startBoil(true);
+                        tileEntity.setElapsedBoilTimeTick(0);
+                    }
+                    else
+                    {
+                        tileEntity.startBoil(false);
+                    }
+                }
+                else if (world.getBlock(x, y - 1, z) != TutorialModBlocks.kilnBlock)
+                {
+                    tileEntity.startBoil(true);
+                    tileEntity.setElapsedBoilTimeTick(0);
+                }
+            }
+            if (world.getBlock(x, y - 1, z) == Blocks.air)
+            {
+                tileEntity.startBoil(false);
+            }
+        }
+
     }
 
     public static void matchedOuput(ItemStack[] currentItems)

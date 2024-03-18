@@ -1,18 +1,22 @@
 package itsaslan.tutorialmod.tileentity;
 
-import net.minecraft.item.Item;
+import itsaslan.tutorialmod.interfaces.IWaterBoiler;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.Packet;
 import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.world.WorldServer;
 
-public class blockPotTileEntity extends TileEntity
+public class blockPotTileEntity extends TileEntity implements IWaterBoiler
 {
 
     private ItemStack[] storedItems = new ItemStack[3];
     private boolean waterFilled = false;
+
+    private int elapsedTime = 0;
+    private boolean startBoil = false;
 
     @Override
     public void writeToNBT(NBTTagCompound compound) {
@@ -92,5 +96,68 @@ public class blockPotTileEntity extends TileEntity
     {
         this.waterFilled = bool;
         worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
+    }
+
+    @Override
+    public void updateEntity() {
+        super.updateEntity();
+
+        System.out.println("debug");
+        double x = xCoord + 0.5;
+        double y = yCoord + 1;
+        double z = zCoord + 0.5;
+        worldObj.spawnParticle("bubble", x, y, z, 0, 0.01D, 0);
+
+        if(isBoiling() && getFilledWaterBool())
+        {
+            if(getElapsedBoilTimeTick() >= getTickTimeToBoil())
+            {
+
+            }
+            else
+            {
+                setElapsedBoilTimeTick(getElapsedBoilTimeTick() + 1);
+            }
+        }
+    }
+
+    @Override
+    public void onHeatupStart() {}
+
+    @Override
+    public void onBoil() {
+
+    }
+
+    @Override
+    public void setElapsedBoilTimeTick(int time) {
+        this.elapsedTime = time;
+        worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
+    }
+
+    @Override
+    public void setTickTimeToBoil(int time) {
+
+    }
+
+    @Override
+    public void startBoil(boolean start) {
+        this.startBoil = start;
+        worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
+    }
+
+    @Override
+    public boolean isBoiling() {
+        return startBoil;
+    }
+
+    @Override
+    public int getElapsedBoilTimeTick() {
+        return elapsedTime;
+    }
+
+    @Override
+    public int getTickTimeToBoil() {
+        return 100;
     }
 }

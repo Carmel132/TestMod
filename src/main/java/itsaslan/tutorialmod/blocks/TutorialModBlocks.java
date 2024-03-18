@@ -30,6 +30,8 @@ public class TutorialModBlocks {
 
     public static Block blockPot;
 
+    public static Block uraniumOre;
+
     public static void init()
     {
 
@@ -68,6 +70,9 @@ public class TutorialModBlocks {
 
         blockPot = new blockPot(Material.anvil).setCreativeTab(CreativeTabs.tabBlock).setBlockName("blockPot");
         GameRegistry.registerBlock(blockPot, blockPot.getUnlocalizedName());
+
+        uraniumOre = new TutorialBlock(Material.rock, "uraniumOre", 3.0f, 0.0f, 2, 500.0f, Block.soundTypeStone).setCreativeTab(CreativeTabs.tabBlock).setBlockName("uraniumOre");
+        GameRegistry.registerBlock(uraniumOre, uraniumOre.getUnlocalizedName());
 
     }
 

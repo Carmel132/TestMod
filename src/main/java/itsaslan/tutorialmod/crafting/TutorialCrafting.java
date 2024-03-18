@@ -16,6 +16,7 @@ public class TutorialCrafting {
         //GameRegistry.addSmelting(Items.iron_ingot, new ItemStack(TutorialModItems.stellarIngot), 10.0f);
         GameRegistry.addSmelting(TutorialModItems.steelMix, new ItemStack(TutorialModItems.steelIngot, 2), 10.0f);
         GameRegistry.addSmelting(TutorialModItems.copperMix, new ItemStack(TutorialModItems.copperIngot, 2), 0.0f);
+        GameRegistry.addSmelting(TutorialModBlocks.uraniumOre, new ItemStack(TutorialModItems.uraniumIngot), 10.0f);
 
         GameRegistry.addRecipe(new ItemStack(TutorialModBlocks.blockOfStellarOre), new Object[]{"III", "III", "III", 'I', TutorialModItems.stellarIngot});
 
@@ -52,6 +53,12 @@ public class TutorialCrafting {
 
         GameRegistry.addRecipe(new ItemStack(TutorialModItems.cubeOfSpecialGrass), new Object[]{"III", "IJI", "III", 'I', TutorialModItems.specialGrassItem, 'J', TutorialModItems.wax});
         GameRegistry.addShapelessRecipe(new ItemStack(TutorialModItems.specialGrassItem, 8), new Object[]{TutorialModItems.cubeOfSpecialGrass});
+
+        GameRegistry.addRecipe(new ItemStack(TutorialModItems.igniter), new Object[]{"I I", "LOL", "LLL", 'I', Items.glowstone_dust, 'L', TutorialModItems.steelIngot, 'O', TutorialModItems.lithiumCube});
+        GameRegistry.addRecipe(new ItemStack(TutorialModItems.bombCore), new Object[]{"III", "IOI", "III", 'I', TutorialModItems.steelIngot, 'O', TutorialModItems.uraniumIngot});
+        GameRegistry.addRecipe(new ItemStack(TutorialModItems.fuselage), new Object[]{"IOI", "IOI", "IOI", 'I', TutorialModItems.steelIngot, 'O', TutorialModItems.stellarGem});
+
+
     }
 
 }

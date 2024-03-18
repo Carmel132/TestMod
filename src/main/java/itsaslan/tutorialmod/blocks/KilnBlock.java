@@ -49,6 +49,7 @@ public class KilnBlock extends BlockContainer
                         this.setLightLevel(1.0f);
                         ((KilnBlockTileEntity) hitTileEntity).setActiveTimer(100);
                         int newMeta = 1;
+                        world.notifyBlockChange(x, y, z, this);
                         world.setBlockMetadataWithNotify(x, y, z, newMeta, 2);
                     }
                     else if(currentItem == Items.lava_bucket)
@@ -56,12 +57,21 @@ public class KilnBlock extends BlockContainer
                         this.setLightLevel(0.0f);
                         ((KilnBlockTileEntity) hitTileEntity).setActiveTimer(1000);
                         int newMeta = 1;
+                        world.notifyBlockChange(x, y, z, this);
                         world.setBlockMetadataWithNotify(x, y, z, newMeta, 2);
                     }
                     else if(currentItem == TutorialModItems.cloth)
                     {
                         ((KilnBlockTileEntity) hitTileEntity).setActiveTimer(0);
                         int newMeta = 2;
+                        world.notifyBlockChange(x, y, z, this);
+                        world.setBlockMetadataWithNotify(x, y, z, newMeta, 2);
+                    }
+                    else if(currentItem == Items.blaze_rod)
+                    {
+                        ((KilnBlockTileEntity) hitTileEntity).setActiveTimer(9999299);
+                        int newMeta = 1;
+                        world.notifyBlockChange(x, y, z, this);
                         world.setBlockMetadataWithNotify(x, y, z, newMeta, 2);
                     }
                     else

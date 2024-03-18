@@ -1,10 +1,8 @@
 package itsaslan.tutorialmod.generation;
 
 import cpw.mods.fml.common.IWorldGenerator;
-import itsaslan.tutorialmod.blocks.TutorialBlock;
 import itsaslan.tutorialmod.blocks.TutorialModBlocks;
 import net.minecraft.block.Block;
-import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
@@ -44,6 +42,7 @@ public class stellarGeneration implements IWorldGenerator {
     {
         addOreSpawn(TutorialModBlocks.stellarOre, world, random, x, z, 16, 16, 6, 2, 3, 12, 30);
         addOreSpawn(TutorialModBlocks.copperOre, world, random, x, z, 16, 16, 6, 4, 5, 12, 60);
+        addOreSpawn(TutorialModBlocks.uraniumOre, world, random, x, z, 16, 16, 3, 1, 2, 10, 35);
     }
 
     private void genEnd(World world, Random random, int x, int z)
