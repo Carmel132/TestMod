@@ -10,6 +10,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.*;
 import net.minecraft.potion.Potion;
+import net.minecraft.util.EnumChatFormatting;
 
 public class TutorialModItems {
 
@@ -170,7 +171,7 @@ public class TutorialModItems {
         lithiumCube.setTextureName(ModVars.MOD_ID + ":" + lithiumCube.getUnlocalizedName());
         GameRegistry.registerItem(lithiumCube, lithiumCube.getUnlocalizedName());
 
-        uraniumIngot = new PotionEffectEdible(200, 2000.f, true, new Potion[]{Potion.damageBoost}, new int[]{10000}, new int[]{3}).setCreativeTab(CreativeTabs.tabMaterials).setUnlocalizedName("uraniumIngot");
+        uraniumIngot = new PotionEffectEdible(200, 2000.f, true, new Potion[]{Potion.damageBoost}, new int[]{10000}, new int[]{3}, EnumChatFormatting.GREEN, new String[]{"\"You don't get energy from eating Uranium;", "you just get cancer.\""}).setCreativeTab(CreativeTabs.tabMaterials).setUnlocalizedName("uraniumIngot");
         uraniumIngot.setTextureName(ModVars.MOD_ID + ":" + uraniumIngot.getUnlocalizedName());
         GameRegistry.registerItem(uraniumIngot, uraniumIngot.getUnlocalizedName());
 

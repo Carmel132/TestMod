@@ -5,7 +5,10 @@ import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
+
+import java.util.List;
 
 public class PotionEffectEdible extends ItemFood
 {
@@ -14,6 +17,8 @@ public class PotionEffectEdible extends ItemFood
     int[] potionDurations;
     int[] potionAmplifiers;
 
+    EnumChatFormatting color;
+    String[] descriptions;
 
     public PotionEffectEdible(int foodPoint, float saturation, boolean wolfMeat, Potion[] effects, int[] durations, int[] amplifiers) {
         super(foodPoint, saturation, wolfMeat);
@@ -21,6 +26,18 @@ public class PotionEffectEdible extends ItemFood
         this.potionEffects = effects;
         this.potionDurations = durations;
         this.potionAmplifiers = amplifiers;
+
+    }
+
+    public PotionEffectEdible(int foodPoint, float saturation, boolean wolfMeat, Potion[] effects, int[] durations, int[] amplifiers, EnumChatFormatting color, String[] descriptions) {
+        super(foodPoint, saturation, wolfMeat);
+
+        this.potionEffects = effects;
+        this.potionDurations = durations;
+        this.potionAmplifiers = amplifiers;
+
+        this.color = color;
+        this.descriptions = descriptions;
 
     }
 
@@ -33,6 +50,17 @@ public class PotionEffectEdible extends ItemFood
             {
                 player.addPotionEffect(new PotionEffect(potionEffects[effect].id, potionDurations[effect], potionAmplifiers[effect]));
             }
+        }
+    }
+
+    @Override
+    public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean advanced) {
+        super.addInformation(stack, player, list, advanced);
+        // Your item's description
+
+        for(int i = 0; i < descriptions.length; ++i)
+        {
+            list.add(color + descriptions[i]);
         }
     }
 }

@@ -54,7 +54,7 @@ public class TutorialCrafting {
         GameRegistry.addRecipe(new ItemStack(TutorialModItems.cubeOfSpecialGrass), new Object[]{"III", "IJI", "III", 'I', TutorialModItems.specialGrassItem, 'J', TutorialModItems.wax});
         GameRegistry.addShapelessRecipe(new ItemStack(TutorialModItems.specialGrassItem, 8), new Object[]{TutorialModItems.cubeOfSpecialGrass});
 
-        GameRegistry.addRecipe(new ItemStack(TutorialModItems.igniter), new Object[]{"I I", "LOL", "LLL", 'I', Items.glowstone_dust, 'L', TutorialModItems.steelIngot, 'O', TutorialModItems.lithiumCube});
+        GameRegistry.addRecipe(new ItemStack(TutorialModItems.igniter), new Object[]{"I I", "LOL", "LLL", 'I', Items.redstone, 'L', TutorialModItems.steelIngot, 'O', TutorialModItems.lithiumCube});
         GameRegistry.addRecipe(new ItemStack(TutorialModItems.bombCore), new Object[]{"III", "IOI", "III", 'I', TutorialModItems.steelIngot, 'O', TutorialModItems.uraniumIngot});
         GameRegistry.addRecipe(new ItemStack(TutorialModItems.fuselage), new Object[]{"IOI", "IOI", "IOI", 'I', TutorialModItems.steelIngot, 'O', TutorialModItems.stellarGem});
 
