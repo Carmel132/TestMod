@@ -1,6 +1,8 @@
 package itsaslan.tutorialmod.handlers;
 
 import itsaslan.tutorialmod.interfaces.IComplexRecipeHandler;
+import itsaslan.tutorialmod.interfaces.IShapedRecipeHandler;
+import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.ItemStack;
 
 import java.util.ArrayList;
@@ -59,5 +61,6 @@ public class ComplexRecipeHandler
         }
         return inputsNeeded.isEmpty();
     }
+
 
 }

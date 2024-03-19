@@ -62,3 +62,5 @@ item.lithiumCube.name=Cube of Lithium
 item.uraniumIngot.name=Uranium Ingot
 
 tile.uraniumOre.name=Uranium Ore
+
+tile.bombTable.name=Bomb Workbench

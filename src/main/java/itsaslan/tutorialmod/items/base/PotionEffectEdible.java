@@ -17,8 +17,8 @@ public class PotionEffectEdible extends ItemFood
     int[] potionDurations;
     int[] potionAmplifiers;
 
-    EnumChatFormatting color;
-    String[] descriptions;
+    EnumChatFormatting color = EnumChatFormatting.WHITE;
+    String[] descriptions = new String[0];
 
     public PotionEffectEdible(int foodPoint, float saturation, boolean wolfMeat, Potion[] effects, int[] durations, int[] amplifiers) {
         super(foodPoint, saturation, wolfMeat);
@@ -58,9 +58,9 @@ public class PotionEffectEdible extends ItemFood
         super.addInformation(stack, player, list, advanced);
         // Your item's description
 
-        for(int i = 0; i < descriptions.length; ++i)
-        {
-            list.add(color + descriptions[i]);
+        for (String description : descriptions) {
+            list.add(color + description);
         }
+
     }
 }

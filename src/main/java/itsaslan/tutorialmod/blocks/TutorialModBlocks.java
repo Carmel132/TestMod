@@ -32,6 +32,8 @@ public class TutorialModBlocks {
 
     public static Block uraniumOre;
 
+    public static Block bombTable;
+
     public static void init()
     {
 
@@ -73,6 +75,9 @@ public class TutorialModBlocks {
 
         uraniumOre = new TutorialBlock(Material.rock, "uraniumOre", 3.0f, 0.0f, 2, 500.0f, Block.soundTypeStone).setCreativeTab(CreativeTabs.tabBlock).setBlockName("uraniumOre");
         GameRegistry.registerBlock(uraniumOre, uraniumOre.getUnlocalizedName());
+
+        bombTable = new bombTable(Material.rock).setBlockName("bombTable").setCreativeTab(CreativeTabs.tabDecorations);
+        GameRegistry.registerBlock(bombTable, bombTable.getUnlocalizedName());
 
     }
 

@@ -2,6 +2,7 @@ package itsaslan.tutorialmod.register;
 
 import itsaslan.tutorialmod.blocks.TutorialModBlocks;
 import itsaslan.tutorialmod.render.item.BombItemRenderer;
+import itsaslan.tutorialmod.render.item.BombTableRenderer;
 import itsaslan.tutorialmod.render.item.PotItemRenderer;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.MinecraftForgeClient;
@@ -12,5 +13,6 @@ public class registerItemRenderers
     {
         MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(TutorialModBlocks.bombTest), new BombItemRenderer());
         MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(TutorialModBlocks.blockPot), new PotItemRenderer());
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(TutorialModBlocks.bombTable), new BombTableRenderer());
     }
 }
