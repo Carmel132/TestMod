@@ -163,7 +163,7 @@ public class TutorialModItems {
         emeraldInfusedEgg.setTextureName(ModVars.MOD_ID + ":" + emeraldInfusedEgg.getUnlocalizedName());
         GameRegistry.registerItem(emeraldInfusedEgg, emeraldInfusedEgg.getUnlocalizedName());
 
-        cubeOfSpecialGrass = new Item().setCreativeTab(CreativeTabs.tabFood).setUnlocalizedName("cubeOfSpecialGrass");
+        cubeOfSpecialGrass = new ItemDescription(EnumChatFormatting.GREEN, new String[]{"Now this is the good stuff"}).setCreativeTab(CreativeTabs.tabFood).setUnlocalizedName("cubeOfSpecialGrass");
         cubeOfSpecialGrass.setTextureName(ModVars.MOD_ID + ":" + cubeOfSpecialGrass.getUnlocalizedName());
         GameRegistry.registerItem(cubeOfSpecialGrass, cubeOfSpecialGrass.getUnlocalizedName());
 
