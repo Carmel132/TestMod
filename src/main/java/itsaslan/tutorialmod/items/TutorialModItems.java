@@ -176,7 +176,7 @@ public class TutorialModItems {
         uraniumIngot.setTextureName(ModVars.MOD_ID + ":" + uraniumIngot.getUnlocalizedName());
         GameRegistry.registerItem(uraniumIngot, uraniumIngot.getUnlocalizedName());
 
-        grenade = new GrenadeThrowable(10).setUnlocalizedName("grenade");
+        grenade = new GrenadeThrowable(5).setUnlocalizedName("grenade");
         grenade.setTextureName(ModVars.MOD_ID + ":" + grenade.getUnlocalizedName());
         GameRegistry.registerItem(grenade, grenade.getUnlocalizedName());
 

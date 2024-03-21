@@ -42,7 +42,7 @@ public class GrenadeEntity extends EntityThrowable
     {
         if(!worldObj.isRemote)
         {
-            worldObj.createExplosion(this, this.posX, this.posY, this.posZ, radius, true);
+            worldObj.createExplosion(this, this.posX, this.posY, this.posZ, radius, false);
             this.setDead();
         }
     }
