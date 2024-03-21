@@ -58,6 +58,8 @@ public class TutorialCrafting {
         GameRegistry.addRecipe(new ItemStack(TutorialModItems.bombCore), new Object[]{"III", "IOI", "III", 'I', TutorialModItems.steelIngot, 'O', TutorialModItems.uraniumIngot});
         GameRegistry.addRecipe(new ItemStack(TutorialModItems.fuselage), new Object[]{"IOI", "IOI", "IOI", 'I', TutorialModItems.steelIngot, 'O', TutorialModItems.stellarGem});
 
+        GameRegistry.addRecipe(new ItemStack(TutorialModItems.grenade), new Object[]{"II", "OO", 'I', TutorialModItems.steelIngot, 'O', TutorialModItems.dynamite});
+        GameRegistry.addShapelessRecipe(new ItemStack(TutorialModItems.dynamite, 4), new Object[]{Items.clay_ball, Items.clay_ball, TutorialModItems.wax, TutorialModItems.wax});
 
     }
 

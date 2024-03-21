@@ -64,7 +64,8 @@ public class TutorialModItems {
 
     public static Item lithiumCube;
     public static Item uraniumIngot;
-
+    public static Item grenade;
+    public static Item dynamite;
 
     public static void init()
     {
@@ -174,6 +175,14 @@ public class TutorialModItems {
         uraniumIngot = new PotionEffectEdible(200, 2000.f, true, new Potion[]{Potion.damageBoost}, new int[]{10000}, new int[]{3}, EnumChatFormatting.GREEN, new String[]{"\"You don't get energy from eating Uranium;", "you just get cancer.\""}).setCreativeTab(CreativeTabs.tabMaterials).setUnlocalizedName("uraniumIngot");
         uraniumIngot.setTextureName(ModVars.MOD_ID + ":" + uraniumIngot.getUnlocalizedName());
         GameRegistry.registerItem(uraniumIngot, uraniumIngot.getUnlocalizedName());
+
+        grenade = new GrenadeThrowable(10).setUnlocalizedName("grenade");
+        grenade.setTextureName(ModVars.MOD_ID + ":" + grenade.getUnlocalizedName());
+        GameRegistry.registerItem(grenade, grenade.getUnlocalizedName());
+
+        dynamite = new PotionEffectEdible(0, 0f, false, new Potion[]{Potion.hunger}, new int[]{1000}, new int[]{3}, EnumChatFormatting.YELLOW, new String[]{"You didn't expect", "this one to be edible huh?"}).setUnlocalizedName("dynamite").setCreativeTab(CreativeTabs.tabMisc);
+        dynamite.setTextureName(ModVars.MOD_ID + ":" + dynamite.getUnlocalizedName());
+        GameRegistry.registerItem(dynamite, dynamite.getUnlocalizedName());
 
         // Tools
 
