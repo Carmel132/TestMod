@@ -40,20 +40,6 @@ public class EnergyNetworkHandler
     public void deleteNetwork(EnergyNetwork network)
     {
         networks.remove(network);
-        System.out.println(printList());
-    }
-
-    public String printList()
-    {
-
-        String list = "List: \n";
-
-        for(EnergyNetwork network : networks)
-        {
-            list += "\n" + network.toString();
-        }
-
-        return list;
     }
 
 }

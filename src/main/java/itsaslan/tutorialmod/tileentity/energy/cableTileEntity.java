@@ -18,32 +18,41 @@ public class cableTileEntity extends TileEntity implements IEnergyPath, IChatInt
         EnergyNetworkHandler manager = EnergyNetworkHandler.getInstance();
         int[] location = scanForNetwork(worldObj, xCoord, yCoord, zCoord);
 
-        if (location != null && !worldObj.isRemote) {
+        if (location != null && !worldObj.isRemote)
+        {
+
             IEnergyPath block = (IEnergyPath) worldObj.getTileEntity(location[0], location[1], location[2]);
             block.getNetwork().addBlock(worldObj.getTileEntity(xCoord, yCoord, zCoord));
             network = block.getNetwork();
-            if (getPlayer(worldObj) != null) {
-                getPlayer(worldObj).addChatMessage(new ChatComponentText("Connected to Network!"));
-            }
-        } else {
-            if (!worldObj.isRemote) {
+
+            if (getPlayer(worldObj) != null) {getPlayer(worldObj).addChatMessage(new ChatComponentText("Connected to Network!"));}
+
+        }
+        else
+        {
+            if (!worldObj.isRemote)
+            {
+
                 network = manager.createNetwork(worldObj.getTileEntity(xCoord, yCoord, zCoord));
-                if (getPlayer(worldObj) != null) {
-                    getPlayer(worldObj).addChatMessage(new ChatComponentText("Created Network!"));
-                }
+                if (getPlayer(worldObj) != null) {getPlayer(worldObj).addChatMessage(new ChatComponentText("Created Network!"));}
+
             }
         }
     }
 
-    public void disconnectNetwork() {
-        if (network != null && !worldObj.isRemote) {
+    public void disconnectNetwork()
+    {
+
+        if (network != null && !worldObj.isRemote)
+        {
+
             EnergyNetworkHandler manager = EnergyNetworkHandler.getInstance();
             network.removeBlock(worldObj.getTileEntity(xCoord, yCoord, zCoord));
-            if (network.isEmpty()) {
+
+            if (network.isEmpty())
+            {
                 manager.deleteNetwork(network);
-                if (getPlayer(worldObj) != null) {
-                    getPlayer(worldObj).addChatMessage(new ChatComponentText("Deleted an Empty Network!"));
-                }
+                if (getPlayer(worldObj) != null) {getPlayer(worldObj).addChatMessage(new ChatComponentText("Deleted an Empty Network!"));}
             }
 
             network = null;
