@@ -82,10 +82,10 @@ public class TutorialModBlocks {
         bombTable = new bombTable(Material.rock).setBlockName("bombTable").setCreativeTab(CreativeTabs.tabDecorations);
         GameRegistry.registerBlock(bombTable, bombTable.getUnlocalizedName());
 
-        generator = new TestEnergyGenerator(Material.anvil, 10, 100).setBlockName("generator").setCreativeTab(CreativeTabs.tabBlock);
-        GameRegistry.registerBlock(generator, generator.getUnlocalizedName());
+        //generator = new TestEnergyGenerator(Material.anvil, 10, 100).setBlockName("generator").setCreativeTab(CreativeTabs.tabBlock);
+        //GameRegistry.registerBlock(generator, generator.getUnlocalizedName());
 
-        cable = new TestEnergyCable(Material.anvil).setBlockName("cable").setCreativeTab(CreativeTabs.tabRedstone);
+        cable = new BlockCable(Material.anvil).setBlockName("cable").setCreativeTab(CreativeTabs.tabRedstone);
         GameRegistry.registerBlock(cable, cable.getUnlocalizedName());
 
     }
