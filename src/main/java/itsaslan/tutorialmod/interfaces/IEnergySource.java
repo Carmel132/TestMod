@@ -1,7 +1,7 @@
 package itsaslan.tutorialmod.interfaces;
 
 import itsaslan.tutorialmod.energy.EnergyNetwork;
-import net.minecraft.block.Block;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
 public interface IEnergySource
@@ -16,7 +16,7 @@ public interface IEnergySource
             int dy = y + offset[1];
             int dz = z + offset[2];
 
-            Block neighbor = world.getBlock(dx, dy, dz);
+            TileEntity neighbor = world.getTileEntity(dx, dy, dz);
 
             if(neighbor instanceof IEnergyPath)
             {
@@ -25,6 +25,7 @@ public interface IEnergySource
                     return new int[]{dx, dy, dz};
                 }
             }
+
         }
 
         return null;

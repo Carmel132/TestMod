@@ -2,6 +2,7 @@ package itsaslan.tutorialmod.interfaces;
 
 import itsaslan.tutorialmod.energy.EnergyNetwork;
 import net.minecraft.block.Block;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
 public interface IEnergyPath
@@ -16,12 +17,16 @@ public interface IEnergyPath
             int dy = y + offset[1];
             int dz = z + offset[2];
 
-            Block neighbor = world.getBlock(dx, dy, dz);
+            TileEntity neighbor = world.getTileEntity(dx, dy, dz);
 
             if(neighbor instanceof IEnergyPath)
             {
-                return new int[]{dx, dy, dz};
+                if(((IEnergyPath) neighbor).getNetwork() != this.getNetwork())
+                {
+                    return new int[]{dx, dy, dz};
+                }
             }
+
         }
 
         return null;

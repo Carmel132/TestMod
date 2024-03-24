@@ -2,6 +2,7 @@ package itsaslan.tutorialmod.energy;
 
 import itsaslan.tutorialmod.interfaces.IEnergyPath;
 import net.minecraft.block.Block;
+import net.minecraft.tileentity.TileEntity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,10 +29,10 @@ public class EnergyNetworkHandler
         return instance;
     }
 
-    public EnergyNetwork createNetwork(Block block)
+    public EnergyNetwork createNetwork(TileEntity tileEntity)
     {
         EnergyNetwork newNetwork = new EnergyNetwork();
-        newNetwork.addBlock(block);
+        newNetwork.addBlock(tileEntity);
         networks.add(newNetwork);
         return newNetwork;
     }
@@ -39,6 +40,20 @@ public class EnergyNetworkHandler
     public void deleteNetwork(EnergyNetwork network)
     {
         networks.remove(network);
+        System.out.println(printList());
+    }
+
+    public String printList()
+    {
+
+        String list = "List: \n";
+
+        for(EnergyNetwork network : networks)
+        {
+            list += "\n" + network.toString();
+        }
+
+        return list;
     }
 
 }

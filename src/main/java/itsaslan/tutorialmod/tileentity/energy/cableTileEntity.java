@@ -1,0 +1,65 @@
+package itsaslan.tutorialmod.tileentity.energy;
+
+import itsaslan.tutorialmod.energy.EnergyNetwork;
+import itsaslan.tutorialmod.energy.EnergyNetworkHandler;
+import itsaslan.tutorialmod.interfaces.IChatInteraction;
+import itsaslan.tutorialmod.interfaces.IEnergyPath;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.ChatComponentText;
+import net.minecraft.world.World;
+
+public class cableTileEntity extends TileEntity implements IEnergyPath, IChatInteraction {
+
+    private EnergyNetwork network;
+
+    public void connectOrCreateNetwork() {
+
+        EnergyNetworkHandler manager = EnergyNetworkHandler.getInstance();
+        int[] location = scanForNetwork(worldObj, xCoord, yCoord, zCoord);
+
+        if (location != null && !worldObj.isRemote) {
+            IEnergyPath block = (IEnergyPath) worldObj.getTileEntity(location[0], location[1], location[2]);
+            block.getNetwork().addBlock(worldObj.getTileEntity(xCoord, yCoord, zCoord));
+            network = block.getNetwork();
+            if (getPlayer(worldObj) != null) {
+                getPlayer(worldObj).addChatMessage(new ChatComponentText("Connected to Network!"));
+            }
+        } else {
+            if (!worldObj.isRemote) {
+                network = manager.createNetwork(worldObj.getTileEntity(xCoord, yCoord, zCoord));
+                if (getPlayer(worldObj) != null) {
+                    getPlayer(worldObj).addChatMessage(new ChatComponentText("Created Network!"));
+                }
+            }
+        }
+    }
+
+    public void disconnectNetwork() {
+        if (network != null && !worldObj.isRemote) {
+            EnergyNetworkHandler manager = EnergyNetworkHandler.getInstance();
+            network.removeBlock(worldObj.getTileEntity(xCoord, yCoord, zCoord));
+            if (network.isEmpty()) {
+                manager.deleteNetwork(network);
+                if (getPlayer(worldObj) != null) {
+                    getPlayer(worldObj).addChatMessage(new ChatComponentText("Deleted an Empty Network!"));
+                }
+            }
+
+            network = null;
+        }
+
+
+    }
+
+    @Override
+    public EntityPlayer getPlayer(World world) {
+        return IChatInteraction.super.getPlayer(world);
+    }
+
+    @Override
+    public EnergyNetwork getNetwork() {
+        return network;
+    }
+
+}
