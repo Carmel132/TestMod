@@ -15,36 +15,46 @@ buildscript {
     }
 }
 
+// Apply the 'forge' plugin
 apply plugin: 'forge'
 
+// Set the Java version for the project here, outside the 'buildscript' block
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+// Configure the 'compileJava' task
+compileJava {
+    options.encoding = 'UTF-8'
+    // Ensure the Java compiler uses the correct boot classpath if necessary
+    options.bootClasspath = org.gradle.internal.jvm.Jvm.current().getJre().getHomeDir().toString() + "/lib/rt.jar"
+}
+
+// Project versioning
 version = "1.0"
-group= "com.yourname.modid" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+group = "com.yourname.modid"
 archivesBaseName = "modid"
 
+// Minecraft mod configuration
 minecraft {
     version = "1.7.10-10.13.4.1614-1.7.10"
     runDir = "eclipse"
 }
 
+// Project dependencies
 dependencies {
-
+    // Define any project dependencies here
 }
 
-processResources
-{
-    // this will ensure that this task is redone when the versions change.
+// Process resources and replace tokens in 'mcmod.info'
+processResources {
     inputs.property "version", project.version
     inputs.property "mcversion", project.minecraft.version
 
-    // replace stuff in mcmod.info, nothing else
     from(sourceSets.main.resources.srcDirs) {
         include 'mcmod.info'
-                
-        // replace version and mcversion
-        expand 'version':project.version, 'mcversion':project.minecraft.version
+        expand 'version': project.version, 'mcversion': project.minecraft.version
     }
-        
-    // copy everything else, thats not the mcmod.info
+
     from(sourceSets.main.resources.srcDirs) {
         exclude 'mcmod.info'
     }
