@@ -19,17 +19,39 @@ public class EnergyNetwork
 
     public void addBlock(TileEntity tileEntity)
     {
-        paths.add((IEnergyPath) tileEntity);
+        if(tileEntity instanceof IEnergySink)
+        {
+            sinks.add((IEnergySink) tileEntity);
+        }
+        else if(tileEntity instanceof IEnergyPath)
+        {
+            paths.add((IEnergyPath) tileEntity);
+        }
+        else if(tileEntity instanceof IEnergySource)
+        {
+            sources.add((IEnergySource) tileEntity);
+        }
     }
 
     public void removeBlock(TileEntity tileEntity)
     {
-        paths.remove((IEnergyPath) tileEntity);
+        if(tileEntity instanceof IEnergySink)
+        {
+            sinks.remove((IEnergySink) tileEntity);
+        }
+        else if(tileEntity instanceof IEnergyPath)
+        {
+            paths.remove((IEnergyPath) tileEntity);
+        }
+        else if(tileEntity instanceof IEnergySource)
+        {
+            sources.remove((IEnergySource) tileEntity);
+        }
     }
 
     public boolean isEmpty()
     {
-        return paths.isEmpty();
+        return paths.isEmpty() && sources.isEmpty() && sinks.isEmpty();
     }
 
 }

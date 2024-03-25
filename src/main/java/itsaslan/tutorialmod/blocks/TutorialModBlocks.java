@@ -34,8 +34,9 @@ public class TutorialModBlocks {
 
     public static Block bombTable;
 
-    public static Block generator;
+    public static Block energyStorage;
     public static Block cable;
+    public static Block energyGenerator;
 
     public static void init()
     {
@@ -82,12 +83,17 @@ public class TutorialModBlocks {
         bombTable = new bombTable(Material.rock).setBlockName("bombTable").setCreativeTab(CreativeTabs.tabDecorations);
         GameRegistry.registerBlock(bombTable, bombTable.getUnlocalizedName());
 
-        //generator = new TestEnergyGenerator(Material.anvil, 10, 100).setBlockName("generator").setCreativeTab(CreativeTabs.tabBlock);
-        //GameRegistry.registerBlock(generator, generator.getUnlocalizedName());
+        energyStorage = new BlockEnergyStorage(Material.anvil).setBlockName("storage").setCreativeTab(CreativeTabs.tabRedstone);
+        energyStorage.setBlockTextureName(ModVars.MOD_ID + ":" + energyStorage.getUnlocalizedName());
+        GameRegistry.registerBlock(energyStorage, energyStorage.getUnlocalizedName());
 
         cable = new BlockCable(Material.anvil).setBlockName("cable").setCreativeTab(CreativeTabs.tabRedstone);
+        cable.setBlockTextureName(ModVars.MOD_ID + ":" + cable.getUnlocalizedName());
         GameRegistry.registerBlock(cable, cable.getUnlocalizedName());
 
+        energyGenerator = new BlockEnergySource(Material.anvil).setBlockName("energyGenerator").setCreativeTab(CreativeTabs.tabRedstone);
+        energyGenerator.setBlockTextureName(ModVars.MOD_ID + ":" + energyGenerator.getUnlocalizedName());
+        GameRegistry.registerBlock(energyGenerator, energyGenerator.getUnlocalizedName());
     }
 
 }

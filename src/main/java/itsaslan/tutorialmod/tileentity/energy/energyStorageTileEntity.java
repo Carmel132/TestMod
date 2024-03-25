@@ -2,17 +2,20 @@ package itsaslan.tutorialmod.tileentity.energy;
 
 import itsaslan.tutorialmod.energy.EnergyNetwork;
 import itsaslan.tutorialmod.energy.EnergyNetworkHandler;
+import itsaslan.tutorialmod.enums.EnergyActionType;
 import itsaslan.tutorialmod.interfaces.IChatInteraction;
 import itsaslan.tutorialmod.interfaces.IEnergyPath;
+import itsaslan.tutorialmod.interfaces.IEnergySink;
 import itsaslan.tutorialmod.interfaces.INetwork;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.world.World;
 
-public class cableTileEntity extends TileEntity implements IEnergyPath, INetwork, IChatInteraction {
+public class energyStorageTileEntity extends TileEntity implements IEnergySink, INetwork, IChatInteraction
+{
 
     private EnergyNetwork network;
+    private int energyLevel = 0;
 
     public void connectOrCreateNetwork() {
 
@@ -63,13 +66,32 @@ public class cableTileEntity extends TileEntity implements IEnergyPath, INetwork
     }
 
     @Override
-    public EntityPlayer getPlayer(World world) {
-        return IChatInteraction.super.getPlayer(world);
+    public int[] scanForNetwork(World world, int x, int y, int z) {
+        return IEnergySink.super.scanForNetwork(world, x, y, z);
+    }
+
+    @Override
+    public void setEnergyLevel(int energy) {
+        energyLevel = energy;
+    }
+
+    @Override
+    public int getEnergyLevel() {
+        return energyLevel;
+    }
+
+    @Override
+    public int getMaxEnergy() {
+        return 1000;
+    }
+
+    @Override
+    public EnergyActionType getEnergyStorageAction() {
+        return EnergyActionType.INPUT;
     }
 
     @Override
     public EnergyNetwork getNetwork() {
         return network;
     }
-
 }

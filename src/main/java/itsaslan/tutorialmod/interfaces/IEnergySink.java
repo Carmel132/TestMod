@@ -20,9 +20,9 @@ public interface IEnergySink
 
             TileEntity neighbor = world.getTileEntity(dx, dy, dz);
 
-            if(neighbor instanceof IEnergyPath)
+            if(neighbor instanceof INetwork)
             {
-                if(((IEnergyPath) neighbor).getNetwork() != this.getNetwork())
+                if(((INetwork) neighbor).getNetwork() != this.getNetwork())
                 {
                     return new int[]{dx, dy, dz};
                 }
@@ -32,6 +32,11 @@ public interface IEnergySink
 
         return null;
     }
+
+    void setEnergyLevel(int energy);
+    int getEnergyLevel();
+    int getMaxEnergy();
+
     EnergyActionType getEnergyStorageAction();
 
     EnergyNetwork getNetwork();

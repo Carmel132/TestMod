@@ -18,9 +18,9 @@ public interface IEnergySource
 
             TileEntity neighbor = world.getTileEntity(dx, dy, dz);
 
-            if(neighbor instanceof IEnergyPath)
+            if(neighbor instanceof INetwork)
             {
-                if(((IEnergyPath) neighbor).getNetwork() != this.getNetwork())
+                if(((INetwork) neighbor).getNetwork() != this.getNetwork())
                 {
                     return new int[]{dx, dy, dz};
                 }

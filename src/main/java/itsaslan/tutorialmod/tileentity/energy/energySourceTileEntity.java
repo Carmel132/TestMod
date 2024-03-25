@@ -3,14 +3,15 @@ package itsaslan.tutorialmod.tileentity.energy;
 import itsaslan.tutorialmod.energy.EnergyNetwork;
 import itsaslan.tutorialmod.energy.EnergyNetworkHandler;
 import itsaslan.tutorialmod.interfaces.IChatInteraction;
-import itsaslan.tutorialmod.interfaces.IEnergyPath;
+import itsaslan.tutorialmod.interfaces.IEnergySource;
 import itsaslan.tutorialmod.interfaces.INetwork;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.world.World;
 
-public class cableTileEntity extends TileEntity implements IEnergyPath, INetwork, IChatInteraction {
+public class energySourceTileEntity extends TileEntity implements IEnergySource, INetwork, IChatInteraction
+{
 
     private EnergyNetwork network;
 
@@ -68,8 +69,22 @@ public class cableTileEntity extends TileEntity implements IEnergyPath, INetwork
     }
 
     @Override
+    public int[] scanForNetwork(World world, int x, int y, int z) {
+        return IEnergySource.super.scanForNetwork(world, x, y, z);
+    }
+
+    @Override
+    public int getProductionRate() {
+        return 10;
+    }
+
+    @Override
+    public int getMaxBuffer() {
+        return 1000;
+    }
+
+    @Override
     public EnergyNetwork getNetwork() {
         return network;
     }
-
 }
