@@ -23,7 +23,7 @@ public class CommonProxy {
         TutorialCrafting.init();
         registerCustomRecipes.init();
         registerCustomComplexRecipes.init();
-        registerEntities.init();
+        registerEntities.init();;
     }
 
     public void postInit(FMLPostInitializationEvent $e)
