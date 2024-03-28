@@ -37,6 +37,7 @@ public class TutorialModBlocks {
     public static Block energyStorage;
     public static Block cable;
     public static Block energyGenerator;
+    public static Block fuelTank;
 
     public static void init()
     {
@@ -94,6 +95,9 @@ public class TutorialModBlocks {
         energyGenerator = new BlockEnergySource(Material.anvil).setBlockName("energyGenerator").setCreativeTab(CreativeTabs.tabRedstone);
         energyGenerator.setBlockTextureName(ModVars.MOD_ID + ":" + energyGenerator.getUnlocalizedName());
         GameRegistry.registerBlock(energyGenerator, energyGenerator.getUnlocalizedName());
+
+        fuelTank = new BlockFuelTank(Material.anvil).setCreativeTab(CreativeTabs.tabBlock).setBlockName("fuelTank");
+        GameRegistry.registerBlock(fuelTank, fuelTank.getUnlocalizedName());
     }
 
 }

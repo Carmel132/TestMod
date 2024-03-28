@@ -1,5 +1,6 @@
 package itsaslan.tutorialmod.items;
 
+import cpw.mods.fml.common.ModContainer;
 import cpw.mods.fml.common.registry.GameRegistry;
 import itsaslan.tutorialmod.blocks.TutorialModBlocks;
 import itsaslan.tutorialmod.enums.ArmorMaterials;
@@ -66,6 +67,8 @@ public class TutorialModItems {
     public static Item uraniumIngot;
     public static Item grenade;
     public static Item dynamite;
+
+    public static Item proton;
 
     public static void init()
     {
@@ -183,6 +186,10 @@ public class TutorialModItems {
         dynamite = new PotionEffectEdible(0, 0f, false, new Potion[]{Potion.hunger}, new int[]{1000}, new int[]{3}, EnumChatFormatting.YELLOW, new String[]{"You didn't expect", "this one to be edible huh?"}).setUnlocalizedName("dynamite").setCreativeTab(CreativeTabs.tabMisc);
         dynamite.setTextureName(ModVars.MOD_ID + ":" + dynamite.getUnlocalizedName());
         GameRegistry.registerItem(dynamite, dynamite.getUnlocalizedName());
+
+        proton = new ItemFood(5, 0.2f, false).setCreativeTab(CreativeTabs.tabFood).setUnlocalizedName("proton");
+        proton.setTextureName(ModVars.MOD_ID + ":" + proton.getUnlocalizedName());
+        GameRegistry.registerItem(proton, proton.getUnlocalizedName());
 
         // Tools
 

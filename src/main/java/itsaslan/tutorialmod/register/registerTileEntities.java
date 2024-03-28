@@ -1,6 +1,7 @@
 package itsaslan.tutorialmod.register;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import itsaslan.tutorialmod.render.tileentity.FuelTankEntityRenderer;
 import itsaslan.tutorialmod.tileentity.*;
 
 public class registerTileEntities
@@ -12,6 +13,7 @@ public class registerTileEntities
         GameRegistry.registerTileEntity(KilnBlockTileEntity.class, "kilnTileEntity");
         GameRegistry.registerTileEntity(BombTestTileEntity.class, "bombTileEntity");
         GameRegistry.registerTileEntity(blockPotTileEntity.class, "blockPotTileEntity");
+        GameRegistry.registerTileEntity(fuelTankTileEntity.class, "fuelTankTileEntity");
     }
 }
 

@@ -71,3 +71,6 @@ item.dynamite.name=Dynamite
 tile.energyGenerator.name=Energy Generator
 tile.storage.name=Energy Storage
 tile.cable.name=Energy Cable
+
+item.proton.name=Proton
+tile.fuelTank.name=Fuel Tank
