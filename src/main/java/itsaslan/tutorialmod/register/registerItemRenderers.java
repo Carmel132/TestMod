@@ -17,6 +17,7 @@ public class registerItemRenderers
         MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(TutorialModBlocks.blockPot), new PotItemRenderer());
         MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(TutorialModBlocks.bombTable), new BombTableRenderer());
         MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(TutorialModBlocks.fuelTank), new FuelTankItemRenderer());
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(TutorialModBlocks.thruster), new ThrusterItemRenderer());
 
         RenderingRegistry.registerEntityRenderingHandler(GrenadeEntity.class, new GrenadeRenderer(TutorialModItems.grenade, 1));
 

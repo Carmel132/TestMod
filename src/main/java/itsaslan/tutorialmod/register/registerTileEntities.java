@@ -14,6 +14,7 @@ public class registerTileEntities
         GameRegistry.registerTileEntity(BombTestTileEntity.class, "bombTileEntity");
         GameRegistry.registerTileEntity(blockPotTileEntity.class, "blockPotTileEntity");
         GameRegistry.registerTileEntity(fuelTankTileEntity.class, "fuelTankTileEntity");
+        GameRegistry.registerTileEntity(thrusterTileEntity.class, "thrusterTileEntity");
     }
 }
 

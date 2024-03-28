@@ -38,6 +38,8 @@ public class TutorialModBlocks {
     public static Block cable;
     public static Block energyGenerator;
     public static Block fuelTank;
+    public static Block thruster;
+    public static Block controlBlock;
 
     public static void init()
     {
@@ -98,6 +100,13 @@ public class TutorialModBlocks {
 
         fuelTank = new BlockFuelTank(Material.anvil).setCreativeTab(CreativeTabs.tabBlock).setBlockName("fuelTank");
         GameRegistry.registerBlock(fuelTank, fuelTank.getUnlocalizedName());
+
+        thruster = new BlockThruster(Material.anvil).setCreativeTab(CreativeTabs.tabBlock).setBlockName("thruster");
+        GameRegistry.registerBlock(thruster, thruster.getUnlocalizedName());
+
+        controlBlock = new TutorialBlock(Material.rock, "controlBlock", 3.0f, 0.5f, 2, 500.0f, Block.soundTypeAnvil);
+        GameRegistry.registerBlock(controlBlock, controlBlock.getUnlocalizedName());
+
     }
 
 }

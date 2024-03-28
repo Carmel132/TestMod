@@ -21,4 +21,10 @@ public class TutorialBlock extends Block
         this.setStepSound(Sound);
     }
 
+    @Override
+    public boolean isOpaqueCube()
+    {
+        return false;
+    }
+
 }

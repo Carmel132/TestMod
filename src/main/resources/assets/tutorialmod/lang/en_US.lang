@@ -74,3 +74,5 @@ tile.cable.name=Energy Cable
 
 item.proton.name=Proton
 tile.fuelTank.name=Fuel Tank
+tile.thruster.name=Single Use Thruster
+tile.controlBlock.name=Control Block

@@ -1,14 +1,8 @@
 package itsaslan.tutorialmod.register;
 
 import cpw.mods.fml.client.registry.ClientRegistry;
-import itsaslan.tutorialmod.render.tileentity.BombTableEntityRenderer;
-import itsaslan.tutorialmod.render.tileentity.BombTestEntityRenderer;
-import itsaslan.tutorialmod.render.tileentity.FuelTankEntityRenderer;
-import itsaslan.tutorialmod.render.tileentity.PotEntityRenderer;
-import itsaslan.tutorialmod.tileentity.BombTestTileEntity;
-import itsaslan.tutorialmod.tileentity.blockPotTileEntity;
-import itsaslan.tutorialmod.tileentity.bombTableTileEntity;
-import itsaslan.tutorialmod.tileentity.fuelTankTileEntity;
+import itsaslan.tutorialmod.render.tileentity.*;
+import itsaslan.tutorialmod.tileentity.*;
 
 public class registerSpecialRenderers
 {
@@ -18,5 +12,6 @@ public class registerSpecialRenderers
         ClientRegistry.bindTileEntitySpecialRenderer(blockPotTileEntity.class, new PotEntityRenderer());
         ClientRegistry.bindTileEntitySpecialRenderer(bombTableTileEntity.class, new BombTableEntityRenderer());
         ClientRegistry.bindTileEntitySpecialRenderer(fuelTankTileEntity.class, new FuelTankEntityRenderer());
+        ClientRegistry.bindTileEntitySpecialRenderer(thrusterTileEntity.class, new ThrusterEntityRenderer());
     }
 }
