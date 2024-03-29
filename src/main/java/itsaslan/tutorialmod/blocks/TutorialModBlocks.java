@@ -6,35 +6,26 @@ import itsaslan.tutorialmod.lib.ModVars;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraftforge.common.util.ForgeDirection;
 
 public class TutorialModBlocks {
 
     public static TutorialBlock blockOfStellarOre;
     public static TutorialBlock stellarOre;
     public static Block waxCrop;
-
     public static Block waxChest;
-
     public static Block testGuiBlock;
     public static Block testCraftingTableBlock;
     public static Block kilnBlock;
-
     public static Block copperOre;
     public static Block armorInfuser;
-
     public static Block blackRock;
-
     public static Block bombTest;
-
     public static Block specialGrassTop;
     public static Block specialGrassBottom;
-
     public static Block blockPot;
-
     public static Block uraniumOre;
-
     public static Block bombTable;
-
     public static Block energyStorage;
     public static Block cable;
     public static Block energyGenerator;

@@ -1,33 +1,18 @@
 item.stellarIngot.name=Stellar Ingot
-tile.blockOfStellarOre.name=Block of Stellar Ore
-tile.stellarOre.name=Stellar Ore
-
 item.stellarSword.name=Stellar Sword
 item.stellarAxe.name=Stellar Axe
 item.stellarPickaxe.name=Stellar Pickaxe
 item.stellarShovel.name=Stellar Shovel
 item.stellarHoe.name=Stellar Hoe
-
 item.stellarHelmet.name=Stellar Helmet
 item.stellarChestplate.name=Stellar Chestplate
 item.stellarBoots.name=Stellar Boots
 item.stellarLeggings.name=Stellar Leggings
-
 item.stellarGem.name=Stellar Gem
-
 item.wax.name=Cube of Wax
 item.waxSeed.name=Wax Seed
-tile.waxCrop.name=Wax Crop
-
 item.sandpaper.name=Sandpaper
 item.stellarNugget.name=Stellar Nugget
-
-tile.waxChest.name=Wax Chest
-
-tile.waxFurnace.name=Wax Furnace
-tile.Kiln.name=Kiln Furnace
-tile.testGuiBlock.name=Red Chest
-tile.testCraftingTableBlock.name=Gem Workbench
 item.steelIngot.name=Steel Ingot
 item.steelMix.name=Steel Mix
 item.cloth.name=Cloth
@@ -35,46 +20,45 @@ item.emeraldMix.name=Emerald Mix
 item.infusingRod.name=Infusing Rod
 item.copperMix.name=Copper Mix
 item.copperIngot.name=Copper Ingot
-tile.copperOre.name=Copper Ore
-tile.armorInfuser.name=Armor Infuser
-tile.blackRock.name=Black Rock
 item.blackBrick.name=Black Brick
 item.infusedHelmet.name=Infused Helmet
 item.infusedChestplate.name=Infused Chestplate
 item.infusedLeggings.name=Infused Leggings
 item.infusedBoots.name=Infused Boots
 item.pickle.name=pickle
-
 item.igniter.name=Igniter
 item.fuselage.name=Fuselage
 item.bombCore.name=Bomb Core
-tile.bombTest.name=BOMB
-
 item.specialGrassSeed.name=Special Grass Seed
 item.specialGrassItem.name=Special Grass
 item.cubeOfSpecialGrass.name=Cube of Special Grass
-
 item.emeraldInfusedEgg.name=Emerald Infused Egg
-
-tile.blockPot.name=Pot
-
 item.lithiumCube.name=Cube of Lithium
 item.uraniumIngot.name=Uranium Ingot
-
-tile.uraniumOre.name=Uranium Ore
-
-tile.bombTable.name=Bomb Workbench
-
 item.grenade.name=Pipebomb
 item.dynamite.name=Dynamite
-
-tile.energyGenerator.name=Energy Generator
-tile.storage.name=Energy Storage
-tile.cable.name=Energy Cable
-
 item.proton.name=Proton
+
+tile.blockOfStellarOre.name=Block of Stellar Ore
+tile.stellarOre.name=Stellar Ore
 tile.fuelTank.name=Fuel Tank
 tile.thruster.name=Single Use Thruster
 tile.controlBlock.name=Control Block
+tile.energyGenerator.name=Energy Generator
+tile.storage.name=Energy Storage
+tile.cable.name=Energy Cable
+tile.uraniumOre.name=Uranium Ore
+tile.bombTable.name=Bomb Workbench
+tile.blockPot.name=Pot
+tile.bombTest.name=BOMB
+tile.copperOre.name=Copper Ore
+tile.armorInfuser.name=Armor Infuser
+tile.blackRock.name=Black Rock
+tile.waxChest.name=Wax Chest
+tile.waxFurnace.name=Wax Furnace
+tile.Kiln.name=Kiln Furnace
+tile.testGuiBlock.name=Red Chest
+tile.testCraftingTableBlock.name=Gem Workbench
+tile.waxCrop.name=Wax Crop
 
 itemGroup.mainTab=Main tab

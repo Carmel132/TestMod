@@ -21,54 +21,40 @@ public class TutorialModItems {
     public static Item stellarNugget;
     public static Item steelIngot;
     public static Item steelMix;
-
     public static Item stellarSword;
     public static Item stellarPickaxe;
     public static Item stellarAxe;
     public static Item stellarHoe;
     public static Item stellarShovel;
-
     public static ItemArmor stellarHelmet;
     public static ItemArmor stellarChestplate;
     public static ItemArmor stellarLeggings;
     public static ItemArmor stellarBoots;
-
     public static Item waxSeed;
     public static Item wax;
-
     public static Item sandPaper;
     public static Item cloth;
     public static Item emeraldMix;
-
     public static Item copperMix;
     public static Item copperIngot;
-
     public static Item infusingRod;
-
     public static Item blackBrick;
-
     public static ItemArmor infusedHelmet;
     public static ItemArmor infusedChestplate;
     public static ItemArmor infusedLeggings;
     public static ItemArmor infusedBoots;
-
     public static Item pickle;
-
     public static Item igniter;
     public static Item fuselage;
     public static Item bombCore;
-
     public static Item specialGrassSeed;
     public static Item specialGrassItem;
     public static Item cubeOfSpecialGrass;
-
     public static Item emeraldInfusedEgg;
-
     public static Item lithiumCube;
     public static Item uraniumIngot;
     public static Item grenade;
     public static Item dynamite;
-
     public static Item proton;
 
     public static void init()
