@@ -76,3 +76,5 @@ item.proton.name=Proton
 tile.fuelTank.name=Fuel Tank
 tile.thruster.name=Single Use Thruster
 tile.controlBlock.name=Control Block
+
+itemGroup.mainTab=Main tab

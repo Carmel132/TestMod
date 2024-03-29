@@ -1,5 +1,6 @@
 package itsaslan.tutorialmod.items;
 
+import itsaslan.tutorialmod.Main;
 import itsaslan.tutorialmod.entity.GrenadeEntity;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -17,7 +18,7 @@ public class GrenadeThrowable extends Item
         super();
 
         this.maxStackSize = 16;
-        this.setCreativeTab(CreativeTabs.tabMisc);
+        this.setCreativeTab(Main.mainModTab);
         this.radius = radius;
 
     }
