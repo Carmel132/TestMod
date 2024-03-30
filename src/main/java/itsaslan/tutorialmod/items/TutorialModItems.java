@@ -56,6 +56,7 @@ public class TutorialModItems {
     public static Item grenade;
     public static Item dynamite;
     public static Item proton;
+    public static Item AoePickaxe;
 
     public static void init()
     {
@@ -199,6 +200,10 @@ public class TutorialModItems {
         stellarShovel = new ShovelBase(ToolMaterials.STELLARMATERIAL).setUnlocalizedName("stellarShovel").setCreativeTab(Main.mainModTab);
         stellarShovel.setTextureName(ModVars.MOD_ID + ":" + stellarShovel.getUnlocalizedName());
         GameRegistry.registerItem(stellarShovel, "stellarShovel");
+
+        AoePickaxe = new AoePickaxeBase(ToolMaterials.AOEMATERIAL, 3,3).setUnlocalizedName("aoePickaxe").setCreativeTab(Main.mainModTab);
+        AoePickaxe.setTextureName(ModVars.MOD_ID + ":" + AoePickaxe.getUnlocalizedName());
+        GameRegistry.registerItem(AoePickaxe, AoePickaxe.getUnlocalizedName());
 
         // Crops
 

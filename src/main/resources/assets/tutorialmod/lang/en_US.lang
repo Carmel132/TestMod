@@ -38,6 +38,7 @@ item.uraniumIngot.name=Uranium Ingot
 item.grenade.name=Pipebomb
 item.dynamite.name=Dynamite
 item.proton.name=Proton
+item.aoePickaxe.name=AOE Pickaxe
 
 tile.blockOfStellarOre.name=Block of Stellar Ore
 tile.stellarOre.name=Stellar Ore
