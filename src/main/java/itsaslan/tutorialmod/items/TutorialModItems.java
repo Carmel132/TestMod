@@ -201,8 +201,7 @@ public class TutorialModItems {
         stellarShovel.setTextureName(ModVars.MOD_ID + ":" + stellarShovel.getUnlocalizedName());
         GameRegistry.registerItem(stellarShovel, "stellarShovel");
 
-        AoePickaxe = new AoePickaxeBase(ToolMaterials.AOEMATERIAL, 3,3).setUnlocalizedName("aoePickaxe").setCreativeTab(Main.mainModTab);
-        AoePickaxe.setTextureName(ModVars.MOD_ID + ":" + AoePickaxe.getUnlocalizedName());
+        AoePickaxe = new AoePickaxeBase(ToolMaterials.AOEMATERIAL, 3,3, "aoePickaxe", Main.mainModTab);
         GameRegistry.registerItem(AoePickaxe, AoePickaxe.getUnlocalizedName());
 
         // Crops

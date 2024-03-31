@@ -2,7 +2,9 @@ package itsaslan.tutorialmod.items.base;
 
 import itsaslan.tutorialmod.api.ExtraMath;
 import itsaslan.tutorialmod.enums.CardinalDirection;
+import itsaslan.tutorialmod.lib.ModVars;
 import net.minecraft.block.Block;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -13,16 +15,20 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-public class AoePickaxeBase extends ItemPickaxe
+public class AoePickaxeBase extends ItemPickaxeEntitySpawner
 {
 
     private int COLUMNSIZE;
     private int ROWSIZE;
 
-    public AoePickaxeBase(ToolMaterial mat, int ROWSIZE, int COLUMNSIZE) {
+    public AoePickaxeBase(ToolMaterial mat, int ROWSIZE, int COLUMNSIZE, String unlocalizedName, CreativeTabs tab) {
         super(mat);
         this.ROWSIZE = ROWSIZE / 2;
         this.COLUMNSIZE = COLUMNSIZE / 2;
+        this.setUnlocalizedName(unlocalizedName);
+        this.setCreativeTab(tab);
+
+        this.setTextureName(ModVars.MOD_ID + ":" + this.getUnlocalizedName());
     }
 
     @Override
