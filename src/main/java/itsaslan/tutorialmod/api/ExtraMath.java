@@ -20,7 +20,7 @@ public class ExtraMath
         return new float[]{dx, dy, dz};
     }
 
-    public static CardinalDirection getPlayerGeneralDirection(EntityPlayer player) {
+    public static CardinalDirection getPlayerCardinalDirection(EntityPlayer player) {
         float yaw = (player.rotationYaw % 360 + 360) % 360; // Normalize to 0-360 degrees
         if (yaw >= 45 && yaw < 135) {
             return CardinalDirection.WEST;

@@ -2,6 +2,7 @@ package itsaslan.tutorialmod.blocks;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import itsaslan.tutorialmod.Main;
+import itsaslan.tutorialmod.items.TutorialModItems;
 import itsaslan.tutorialmod.lib.ModVars;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -31,6 +32,7 @@ public class TutorialModBlocks {
     public static Block fuelTank;
     public static Block thruster;
     public static Block controlBlock;
+    public static Block sulfurOre;
 
     public static void init()
     {
@@ -98,6 +100,8 @@ public class TutorialModBlocks {
         controlBlock = new TutorialBlock(Material.rock, "controlBlock", 3.0f, 0.5f, 2, 500.0f, Block.soundTypeAnvil);
         GameRegistry.registerBlock(controlBlock, controlBlock.getUnlocalizedName());
 
+        sulfurOre = new OreBlockBase(Material.rock, "sulfurOre", Main.mainModTab, TutorialModItems.sulfur, 5, 10);
+        GameRegistry.registerBlock(sulfurOre, sulfurOre.getUnlocalizedName());
     }
 
 }

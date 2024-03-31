@@ -57,6 +57,8 @@ public class TutorialModItems {
     public static Item dynamite;
     public static Item proton;
     public static Item AoePickaxe;
+    public static Item sulfur;
+    public static Item sulfurCube;
 
     public static void init()
     {
@@ -178,6 +180,14 @@ public class TutorialModItems {
         proton = new ItemFood(5, 0.2f, false).setCreativeTab(Main.mainModTab).setUnlocalizedName("proton");
         proton.setTextureName(ModVars.MOD_ID + ":" + proton.getUnlocalizedName());
         GameRegistry.registerItem(proton, proton.getUnlocalizedName());
+
+        sulfur = new Item().setCreativeTab(Main.mainModTab).setUnlocalizedName("sulfur");
+        sulfur.setTextureName(ModVars.MOD_ID + ":" + sulfur.getUnlocalizedName());
+        GameRegistry.registerItem(sulfur, sulfur.getUnlocalizedName());
+
+        sulfurCube = new Item().setCreativeTab(Main.mainModTab).setUnlocalizedName("sulfurCube");
+        sulfurCube.setTextureName(ModVars.MOD_ID + ":" + sulfurCube.getUnlocalizedName());
+        GameRegistry.registerItem(sulfurCube, sulfurCube.getUnlocalizedName());
 
         // Tools
 

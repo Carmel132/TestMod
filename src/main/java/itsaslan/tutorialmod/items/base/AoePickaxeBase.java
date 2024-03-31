@@ -8,7 +8,6 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
-import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
@@ -37,7 +36,7 @@ public class AoePickaxeBase extends ItemPickaxeEntitySpawner
         if(!world.isRemote && player instanceof EntityPlayer)
         {
             EntityPlayer playerEntity = (EntityPlayer) player;
-            CardinalDirection direction = ExtraMath.getPlayerGeneralDirection(playerEntity);
+            CardinalDirection direction = ExtraMath.getPlayerCardinalDirection(playerEntity);
 
             for(int i = -COLUMNSIZE; i <= COLUMNSIZE; ++i)
             {

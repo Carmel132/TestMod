@@ -36,6 +36,7 @@ public class stellarGeneration implements IWorldGenerator {
     private void genNether(World world, Random random, int x, int z)
     {
         addOreSpawn(TutorialModBlocks.stellarOre, world, random, x, z, 16, 16, 6, 2, 3, 12, 30);
+        addOreSpawn(TutorialModBlocks.sulfurOre, world, random, x, z, 16, 16, 5, 3, 6, 12, 50);
     }
 
     private void genOverworld(World world, Random random, int x, int z)
@@ -43,6 +44,7 @@ public class stellarGeneration implements IWorldGenerator {
         addOreSpawn(TutorialModBlocks.stellarOre, world, random, x, z, 16, 16, 6, 2, 3, 12, 30);
         addOreSpawn(TutorialModBlocks.copperOre, world, random, x, z, 16, 16, 6, 4, 5, 12, 60);
         addOreSpawn(TutorialModBlocks.uraniumOre, world, random, x, z, 16, 16, 3, 1, 2, 10, 35);
+        addOreSpawn(TutorialModBlocks.sulfurOre, world, random, x, z, 16, 16, 12, 5, 8, 12, 50);
     }
 
     private void genEnd(World world, Random random, int x, int z)

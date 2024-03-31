@@ -12,8 +12,8 @@ public class CommonProxy {
 
     public void preInit(FMLPreInitializationEvent $e)
     {
-        TutorialModBlocks.init();
         TutorialModItems.init();
+        TutorialModBlocks.init();
         registerGenerators.oreGen();
     }
 

@@ -26,9 +26,9 @@ public class ItemPickaxeEntitySpawner extends ItemPickaxe
 
             EntityLargeFireball fireball = new EntityLargeFireball(world);
             fireball.setPosition(spawnX, spawnY, spawnZ);
-            fireball.accelerationX = playerLookVector.xCoord * 0.1f;
-            fireball.accelerationY = playerLookVector.yCoord * 0.1f;
-            fireball.accelerationZ = playerLookVector.zCoord * 0.1f;
+            fireball.accelerationX = playerLookVector.xCoord * 0.4f;
+            fireball.accelerationY = playerLookVector.yCoord * 0.4f;
+            fireball.accelerationZ = playerLookVector.zCoord * 0.4f;
 
             fireball.field_92057_e = 1;
             fireball.shootingEntity = player;

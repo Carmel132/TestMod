@@ -39,6 +39,8 @@ item.grenade.name=Pipebomb
 item.dynamite.name=Dynamite
 item.proton.name=Proton
 item.aoePickaxe.name=AOE Pickaxe
+item.sulfur.name=Sulfur
+item.sulfurCube.name=Cube of Sulfur
 
 tile.blockOfStellarOre.name=Block of Stellar Ore
 tile.stellarOre.name=Stellar Ore
@@ -61,5 +63,6 @@ tile.Kiln.name=Kiln Furnace
 tile.testGuiBlock.name=Red Chest
 tile.testCraftingTableBlock.name=Gem Workbench
 tile.waxCrop.name=Wax Crop
+tile.sulfurOre.name=Sulfur Ore
 
 itemGroup.mainTab=Main tab
